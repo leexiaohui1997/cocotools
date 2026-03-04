@@ -1,0 +1,14 @@
+:root {
+  --td-brand-color: #005238;
+  --td-brand-color-hover: #003d2a;
+  --td-brand-color-focus: #005238;
+  --td-brand-color-active: #00291c;
+  --td-brand-color-disabled: #a0c2b5;
+  --td-brand-color-light: #e6f0ec;
+
+  /* 补充色阶变量以确保部分组件表现正常，基于用户提供的颜色映射 */
+  --td-brand-color-1: #e6f0ec; /* light */
+  --td-brand-color-7: #003d2a; /* hover (注意：用户提供的 hover 颜色比主色深) */
+  --td-brand-color-8: #005238; /* brand */
+  --td-brand-color-9: #00291c; /* active */
+}
