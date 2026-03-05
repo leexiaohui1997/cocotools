@@ -10,6 +10,7 @@ export default {
     aes: "AES 암호화",
     graphics: "그래픽",
     colorConverter: "색상 변환기",
+    whiteboard: "화이트보드",
     lightMode: "라이트 모드",
     darkMode: "다크 모드",
     systemMode: "시스템",
@@ -152,6 +153,54 @@ export default {
             step3: {
               title: "복사 및 사용",
               desc: "해당 형식 옆의 복사 버튼을 클릭하여 색상 코드를 클립보드에 복사합니다.",
+            },
+          },
+        },
+      },
+      whiteboard: {
+        title: "화이트보드",
+        description:
+          "그리기, 지우기, 실행 취소, 다시 실행 등을 지원하는 간단한 온라인 화이트보드 도구입니다.",
+        brush: "브러시",
+        eraser: "지우개",
+        size: "크기",
+        color: "색상",
+        background: "배경",
+        transparent: "투명 배경",
+        opacity: "투명도",
+        undo: "실행 취소",
+        redo: "다시 실행",
+        clear: "지우기",
+        save: "저장",
+        guide: {
+          meaning: {
+            title: "화이트보드 소개",
+            desc: "언제든지 영감을 기록할 수 있는 편리한 온라인 그리기 환경을 제공합니다.",
+          },
+          features: {
+            title: "기능 특징",
+            drawing: {
+              title: "기본 그리기",
+              desc: "사용자 정의 브러시 색상, 크기 및 투명도를 지원합니다.",
+            },
+            history: {
+              title: "기록",
+              desc: "무제한 실행 취소 및 다시 실행 작업을 지원합니다.",
+            },
+          },
+          usage: {
+            title: "사용 가이드",
+            step1: {
+              title: "도구 선택",
+              desc: "브러시 또는 지우개를 선택하고 관련 매개변수를 조정합니다.",
+            },
+            step2: {
+              title: "창작 시작",
+              desc: "캔버스에 그림을 그립니다.",
+            },
+            step3: {
+              title: "작품 저장",
+              desc: "저장 버튼을 클릭하여 작품을 이미지로 내보냅니다.",
             },
           },
         },

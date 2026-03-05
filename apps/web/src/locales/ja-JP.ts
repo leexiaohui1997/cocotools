@@ -10,6 +10,7 @@ export default {
     aes: "AES 暗号化",
     graphics: "グラフィックス",
     colorConverter: "カラーコンバータ",
+    whiteboard: "ホワイトボード",
     lightMode: "ライトモード",
     darkMode: "ダークモード",
     systemMode: "システム",
@@ -152,6 +153,54 @@ export default {
             step3: {
               title: "コピーして使用",
               desc: "対応する形式の横にあるコピーボタンをクリックして、カラーコードをクリップボードにコピーします。",
+            },
+          },
+        },
+      },
+      whiteboard: {
+        title: "ホワイトボード",
+        description:
+          "描画、消去、元に戻す、やり直しなどをサポートするシンプルなオンラインホワイトボードツール。",
+        brush: "ブラシ",
+        eraser: "消しゴム",
+        size: "サイズ",
+        color: "色",
+        background: "背景",
+        transparent: "透明な背景",
+        opacity: "不透明度",
+        undo: "元に戻す",
+        redo: "やり直し",
+        clear: "クリア",
+        save: "保存",
+        guide: {
+          meaning: {
+            title: "ホワイトボードの紹介",
+            desc: "いつでもインスピレーションを記録できる便利なオンライン描画環境を提供します。",
+          },
+          features: {
+            title: "機能の特徴",
+            drawing: {
+              title: "基本的な描画",
+              desc: "ブラシの色、サイズ、不透明度のカスタマイズをサポート。",
+            },
+            history: {
+              title: "履歴",
+              desc: "無制限の元に戻すとやり直しの操作をサポート。",
+            },
+          },
+          usage: {
+            title: "使用ガイド",
+            step1: {
+              title: "ツールの選択",
+              desc: "ブラシまたは消しゴムを選択し、関連するパラメータを調整します。",
+            },
+            step2: {
+              title: "作成の開始",
+              desc: "キャンバスに描画します。",
+            },
+            step3: {
+              title: "作品の保存",
+              desc: "保存ボタンをクリックして、作品を画像としてエクスポートします。",
             },
           },
         },

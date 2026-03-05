@@ -6,10 +6,11 @@ export default {
     devTools: "Инструменты разработчика",
     cssMinify: "CSS Минификатор",
     fileTreeGenerator: "Генератор дерева файлов",
-    tripleDes: "3DES",
+    tripleDes: "3DES Шифрование",
     aes: "AES Шифрование",
     graphics: "Графика",
     colorConverter: "Конвертер цветов",
+    whiteboard: "Белая доска",
     lightMode: "Светлая тема",
     darkMode: "Темная тема",
     systemMode: "Системная",
@@ -36,51 +37,154 @@ export default {
     rate: "Степень",
   },
   tool: {
-    crypto: {
-      tripleDes: {
-        title: "3DES Tool",
+    graphics: {
+      colorConverter: {
+        title: "Конвертер цветов",
         description:
-          "Encrypt and decrypt data using 3DES algorithm, supports multiple modes and padding.",
-        input: "Input Content",
-        key: "Key",
-        mode: "Mode",
-        padding: "Padding",
-        encrypt: "Encrypt",
-        decrypt: "Decrypt",
-        output: "Output Result",
-        copy: "Copy",
-        clear: "Clear",
-        error: "Process Failed",
-        example: "Load Example",
+          "Конвертируйте цвета между форматами (HEX, RGB, HSL, HWB, LCH, CMYK) в реальном времени с предварительным просмотром и случайной генерацией.",
+        input: "Ввод цвета",
+        hexPlaceholder: "Введите цвет HEX (например, #165DFF)",
+        random: "Случайный цвет",
+        clear: "Очистить",
+        preview: "Предпросмотр",
+        output: "Результат конвертации",
+        copy: "Копировать",
+        error: "Ошибка формата",
+        example: "Загрузить пример",
+        presets: {
+          title: "Цветовые пресеты",
+          material: "Material Colors",
+          flat: "Flat Colors",
+          webSafe: "Web Safe Colors",
+          gray: "Оттенки серого",
+        },
         guide: {
           meaning: {
-            title: "Intro to 3DES Encryption",
-            desc: "3DES (Triple DES) is an enhancement of the DES encryption algorithm, which encrypts data three times using up to three different keys, significantly improving security. Although being replaced by AES, it is still widely used in legacy systems and specific industries.",
+            title: "Введение в конвертер цветов",
+            desc: "Инструмент конвертации цветов помогает разработчикам и дизайнерам быстро преобразовывать цвета между различными форматами (такими как Hex, RGB, HSL, HSV, CMYK) для обеспечения точности цветопередачи в различных средах.",
           },
           features: {
-            title: "Features",
-            modes: {
-              title: "Multiple Modes",
-              desc: "Supports various modes like ECB, CBC, CFB, OFB, CTR to meet different security requirements.",
+            title: "Особенности",
+            formats: {
+              title: "Поддержка множества форматов",
+              desc: "Поддержка различных распространенных форматов цветов, включая Hex, RGB, HSL, HSV, CMYK.",
             },
-            padding: {
-              title: "Flexible Padding",
-              desc: "Provides options like Pkcs7, ZeroPadding, Iso10126, NoPadding, AnsiX923 to ensure compatibility.",
+            preview: {
+              title: "Предпросмотр в реальном времени",
+              desc: "После ввода цвета справа в реальном времени отображается предварительный просмотр цвета и результаты конвертации в различные форматы.",
             },
           },
           usage: {
-            title: "Usage Guide",
+            title: "Руководство по использованию",
             step1: {
-              title: "Input Data & Key",
-              desc: "Enter text to encrypt/decrypt on the left and set the key. The key is core to security, keep it safe.",
+              title: "Ввод цвета",
+              desc: "Введите значение Hex, RGB или название цвета в поле ввода.",
             },
             step2: {
-              title: "Select Mode",
-              desc: "Choose appropriate mode (CBC recommended) and padding (Pkcs7 recommended).",
+              title: "Просмотр результатов",
+              desc: "Инструмент автоматически распознает ввод и преобразует его в другие форматы, отображаемые справа.",
             },
             step3: {
-              title: "Execute",
-              desc: "Click Encrypt or Decrypt. Results appear on the right and can be copied.",
+              title: "Копирование и использование",
+              desc: "Нажмите кнопку копирования рядом с соответствующим форматом, чтобы скопировать цветовой код в буфер обмена.",
+            },
+          },
+        },
+      },
+      whiteboard: {
+        title: "Белая доска",
+        description:
+          "Простой онлайн-инструмент для рисования на доске, поддерживающий рисование, стирание, отмену, повтор и многое другое.",
+        brush: "Кисть",
+        eraser: "Ластик",
+        size: "Размер",
+        color: "Цвет",
+        background: "Фон",
+        transparent: "Прозрачный фон",
+        opacity: "Непрозрачность",
+        undo: "Отменить",
+        redo: "Повторить",
+        clear: "Очистить",
+        save: "Сохранить",
+        guide: {
+          meaning: {
+            title: "Введение",
+            desc: "Предоставляет удобную онлайн-среду для рисования, чтобы записывать вдохновение в любое время.",
+          },
+          features: {
+            title: "Особенности",
+            drawing: {
+              title: "Базовое рисование",
+              desc: "Поддержка пользовательского цвета кисти, размера и непрозрачности.",
+            },
+            history: {
+              title: "История",
+              desc: "Поддержка неограниченного количества операций отмены и повтора.",
+            },
+          },
+          usage: {
+            title: "Руководство по использованию",
+            step1: {
+              title: "Выберите инструмент",
+              desc: "Выберите кисть или ластик и настройте соответствующие параметры.",
+            },
+            step2: {
+              title: "Начните творить",
+              desc: "Рисуйте на холсте.",
+            },
+            step3: {
+              title: "Сохраните работу",
+              desc: "Нажмите кнопку сохранения, чтобы экспортировать вашу работу как изображение.",
+            },
+          },
+        },
+      },
+    },
+    crypto: {
+      tripleDes: {
+        title: "Инструмент шифрования 3DES",
+        description:
+          "Шифрование и расшифровка данных с использованием алгоритма 3DES, поддержка различных режимов и заполнения.",
+        input: "Входные данные",
+        key: "Ключ",
+        mode: "Режим",
+        padding: "Заполнение",
+        encrypt: "Зашифровать",
+        decrypt: "Расшифровать",
+        output: "Результат",
+        copy: "Копировать",
+        clear: "Очистить",
+        error: "Ошибка",
+        example: "Пример",
+        guide: {
+          meaning: {
+            title: "Введение в шифрование 3DES",
+            desc: "3DES (Triple DES) — это улучшенная версия алгоритма шифрования DES, которая шифрует данные трижды с использованием до трех различных ключей, что значительно повышает безопасность. Хотя он постепенно заменяется AES, он все еще широко используется в устаревших системах и определенных отраслях.",
+          },
+          features: {
+            title: "Особенности",
+            modes: {
+              title: "Поддержка множества режимов",
+              desc: "Поддержка различных режимов, таких как ECB, CBC, CFB, OFB, CTR, для удовлетворения различных требований безопасности.",
+            },
+            padding: {
+              title: "Гибкое заполнение",
+              desc: "Предоставляет варианты Pkcs7, ZeroPadding, Iso10126, NoPadding, AnsiX923 для обеспечения совместимости.",
+            },
+          },
+          usage: {
+            title: "Руководство по использованию",
+            step1: {
+              title: "Ввод данных и ключа",
+              desc: "Введите текст для шифрования/расшифровки слева и задайте ключ. Ключ — это основа безопасности, храните его в надежном месте.",
+            },
+            step2: {
+              title: "Выберите режим",
+              desc: "Выберите подходящий режим (рекомендуется CBC) и заполнение (рекомендуется Pkcs7).",
+            },
+            step3: {
+              title: "Выполнение",
+              desc: "Нажмите кнопку шифрования или расшифровки. Результаты отобразятся справа, их можно скопировать.",
             },
           },
         },
@@ -144,7 +248,7 @@ export default {
       generateBtn: "Сгенерировать дерево",
       copyBtn: "Копировать результат",
       dragTip: "Перетащите каталог сюда",
-      ignorePatterns: "Игнорируемые шаблоны (через запятую)",
+      ignorePatterns: "Игнорируемые шаблоны",
       guide: {
         meaning: {
           title: "Зачем нужен генератор дерева файлов?",
@@ -240,61 +344,6 @@ export default {
           production: {
             title: "Применение в продакшене",
             desc: "Сжатие CSS является ключом к оптимизации производительности фронтенда, используется в потоках сборки продакшена (Webpack, Vite, Gulp), развертывании CDN (снижение затрат на передачу), оптимизации страниц (улучшение оценок PageSpeed) и мобильной разработке (экономия данных). Минифицированный CSS обычно требует карт кода (source maps) для отладки.",
-          },
-        },
-      },
-    },
-    graphics: {
-      colorConverter: {
-        title: "Конвертер цветов",
-        description:
-          "Конвертируйте цвета между форматами (HEX, RGB, HSL, HWB, LCH, CMYK) в реальном времени с предварительным просмотром и случайной генерацией.",
-        input: "Ввод цвета",
-        hexPlaceholder: "Введите цвет HEX (например, #165DFF)",
-        random: "Случайный цвет",
-        clear: "Очистить",
-        preview: "Предпросмотр",
-        output: "Результат конвертации",
-        copy: "Копировать",
-        error: "Ошибка формата",
-        example: "Загрузить пример",
-        presets: {
-          title: "Цветовые пресеты",
-          material: "Material Colors",
-          flat: "Flat Colors",
-          webSafe: "Web Safe Colors",
-          gray: "Оттенки серого",
-        },
-        guide: {
-          meaning: {
-            title: "Введение в конвертер цветов",
-            desc: "Инструмент конвертации цветов помогает разработчикам и дизайнерам быстро преобразовывать цвета между различными форматами (такими как Hex, RGB, HSL, HSV, CMYK) для обеспечения точности цветопередачи в различных средах.",
-          },
-          features: {
-            title: "Особенности",
-            formats: {
-              title: "Поддержка множества форматов",
-              desc: "Поддержка различных распространенных форматов цветов, включая Hex, RGB, HSL, HSV, CMYK.",
-            },
-            preview: {
-              title: "Предпросмотр в реальном времени",
-              desc: "После ввода цвета справа в реальном времени отображается предварительный просмотр цвета и результаты конвертации в различные форматы.",
-            },
-          },
-          usage: {
-            title: "Руководство по использованию",
-            step1: {
-              title: "Ввод цвета",
-              desc: "Введите значение Hex, RGB или название цвета в поле ввода.",
-            },
-            step2: {
-              title: "Просмотр результатов",
-              desc: "Инструмент автоматически распознает ввод и преобразует его в другие форматы, отображаемые справа.",
-            },
-            step3: {
-              title: "Копирование и использование",
-              desc: "Нажмите кнопку копирования рядом с соответствующим форматом, чтобы скопировать цветовой код в буфер обмена.",
-            },
           },
         },
       },

@@ -10,6 +10,7 @@ export default {
     aes: "Crittografia AES",
     graphics: "Grafica",
     colorConverter: "Convertitore Colori",
+    whiteboard: "Lavagna",
     lightMode: "Modalità chiara",
     darkMode: "Modalità scura",
     systemMode: "Auto",
@@ -184,6 +185,54 @@ export default {
             step3: {
               title: "Copia e Usa",
               desc: "Clicca sul pulsante copia accanto al formato desiderato per copiare il codice colore negli appunti.",
+            },
+          },
+        },
+      },
+      whiteboard: {
+        title: "Lavagna",
+        description:
+          "Un semplice strumento lavagna online che supporta disegno, cancellazione, annulla, ripeti e altro.",
+        brush: "Pennello",
+        eraser: "Gomma",
+        size: "Dimensione",
+        color: "Colore",
+        background: "Sfondo",
+        transparent: "Sfondo Trasparente",
+        opacity: "Opacità",
+        undo: "Annulla",
+        redo: "Ripeti",
+        clear: "Pulisci",
+        save: "Salva",
+        guide: {
+          meaning: {
+            title: "Introduzione",
+            desc: "Fornisce un comodo ambiente di disegno online per registrare l'ispirazione in qualsiasi momento.",
+          },
+          features: {
+            title: "Caratteristiche",
+            drawing: {
+              title: "Disegno Base",
+              desc: "Supporta colore del pennello, dimensione e opacità personalizzati.",
+            },
+            history: {
+              title: "Cronologia",
+              desc: "Supporta operazioni di annulla e ripeti illimitate.",
+            },
+          },
+          usage: {
+            title: "Guida all'uso",
+            step1: {
+              title: "Seleziona Strumento",
+              desc: "Scegli pennello o gomma e regola i parametri relativi.",
+            },
+            step2: {
+              title: "Inizia a Creare",
+              desc: "Disegna sulla tela.",
+            },
+            step3: {
+              title: "Salva Lavoro",
+              desc: "Clicca il pulsante salva per esportare il tuo lavoro come immagine.",
             },
           },
         },

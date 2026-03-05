@@ -6,10 +6,11 @@ export default {
     devTools: "أدوات المطور",
     cssMinify: "ضاغط CSS",
     fileTreeGenerator: "مولد شجرة الملفات",
-    tripleDes: "3DES",
+    tripleDes: "تشفير 3DES",
     aes: "تشفير AES",
     graphics: "الرسومات",
     colorConverter: "محول الألوان",
+    whiteboard: "السبورة البيضاء",
     lightMode: "وضع الضوء",
     darkMode: "الوضع الداكن",
     systemMode: "نظام",
@@ -36,51 +37,154 @@ export default {
     rate: "المعدل",
   },
   tool: {
-    crypto: {
-      tripleDes: {
-        title: "3DES Tool",
+    graphics: {
+      colorConverter: {
+        title: "محول الألوان",
         description:
-          "Encrypt and decrypt data using 3DES algorithm, supports multiple modes and padding.",
-        input: "Input Content",
-        key: "Key",
-        mode: "Mode",
-        padding: "Padding",
-        encrypt: "Encrypt",
-        decrypt: "Decrypt",
-        output: "Output Result",
-        copy: "Copy",
-        clear: "Clear",
-        error: "Process Failed",
-        example: "Load Example",
+          "تحويل الألوان بين التنسيقات (HEX، RGB، HSL، HWB، LCH، CMYK) في الوقت الفعلي مع المعاينة والتوليد العشوائي.",
+        input: "إدخال اللون",
+        hexPlaceholder: "أدخل لون HEX (مثل #165DFF)",
+        random: "لون عشوائي",
+        clear: "مسح",
+        preview: "معاينة",
+        output: "نتائج التحويل",
+        copy: "نسخ",
+        error: "خطأ في التنسيق",
+        example: "تحميل مثال",
+        presets: {
+          title: "إعدادات مسبقة للألوان",
+          material: "ألوان Material",
+          flat: "ألوان مسطحة",
+          webSafe: "ألوان آمنة للويب",
+          gray: "تدرج رمادي",
+        },
         guide: {
           meaning: {
-            title: "Intro to 3DES Encryption",
-            desc: "3DES (Triple DES) is an enhancement of the DES encryption algorithm, which encrypts data three times using up to three different keys, significantly improving security. Although being replaced by AES, it is still widely used in legacy systems and specific industries.",
+            title: "مقدمة محول الألوان",
+            desc: "تساعد أداة محول الألوان المطورين والمصممين على التحويل السريع بين تنسيقات الألوان المختلفة (مثل Hex و RGB و HSL و HSV و CMYK) لضمان دقة الألوان عبر بيئات مختلفة.",
           },
           features: {
-            title: "Features",
-            modes: {
-              title: "Multiple Modes",
-              desc: "Supports various modes like ECB, CBC, CFB, OFB, CTR to meet different security requirements.",
+            title: "الميزات",
+            formats: {
+              title: "دعم تنسيقات متعددة",
+              desc: "يدعم تنسيقات الألوان الشائعة المختلفة بما في ذلك Hex و RGB و HSL و HSV و CMYK.",
             },
-            padding: {
-              title: "Flexible Padding",
-              desc: "Provides options like Pkcs7, ZeroPadding, Iso10126, NoPadding, AnsiX923 to ensure compatibility.",
+            preview: {
+              title: "معاينة في الوقت الفعلي",
+              desc: "أدخل لونًا، وستظهر المعاينة ونتائج التحويل فورًا على اليمين.",
             },
           },
           usage: {
-            title: "Usage Guide",
+            title: "دليل الاستخدام",
             step1: {
-              title: "Input Data & Key",
-              desc: "Enter text to encrypt/decrypt on the left and set the key. The key is core to security, keep it safe.",
+              title: "إدخال اللون",
+              desc: "أدخل قيمة Hex أو قيمة RGB أو اسم اللون في مربع الإدخال.",
             },
             step2: {
-              title: "Select Mode",
-              desc: "Choose appropriate mode (CBC recommended) and padding (Pkcs7 recommended).",
+              title: "عرض النتائج",
+              desc: "تتعرف الأداة تلقائيًا على الإدخال وتحوله إلى تنسيقات أخرى معروضة على اليمين.",
             },
             step3: {
-              title: "Execute",
-              desc: "Click Encrypt or Decrypt. Results appear on the right and can be copied.",
+              title: "نسخ واستخدام",
+              desc: "انقر فوق زر النسخ بجوار التنسيق المطلوب لنسخ كود اللون إلى الحافظة.",
+            },
+          },
+        },
+      },
+      whiteboard: {
+        title: "السبورة البيضاء",
+        description:
+          "أداة سبورة بيضاء بسيطة عبر الإنترنت تدعم الرسم والمسح والتراجع والإعادة والمزيد.",
+        brush: "فرشاة",
+        eraser: "ممحاة",
+        size: "الحجم",
+        color: "اللون",
+        background: "الخلفية",
+        transparent: "خلفية شفافة",
+        opacity: "العتامة",
+        undo: "تراجع",
+        redo: "إعادة",
+        clear: "مسح",
+        save: "حفظ",
+        guide: {
+          meaning: {
+            title: "مقدمة",
+            desc: "يوفر بيئة رسم مريحة عبر الإنترنت لتسجيل الإلهام في أي وقت.",
+          },
+          features: {
+            title: "الميزات",
+            drawing: {
+              title: "الرسم الأساسي",
+              desc: "يدعم تخصيص لون الفرشاة وحجمها وعتامتها.",
+            },
+            history: {
+              title: "السجل",
+              desc: "يدعم عمليات تراجع وإعادة غير محدودة.",
+            },
+          },
+          usage: {
+            title: "دليل الاستخدام",
+            step1: {
+              title: "اختر الأداة",
+              desc: "اختر الفرشاة أو الممحاة واضبط المعلمات ذات الصلة.",
+            },
+            step2: {
+              title: "ابدأ الإبداع",
+              desc: "ارسم على اللوحة.",
+            },
+            step3: {
+              title: "حفظ العمل",
+              desc: "انقر فوق زر الحفظ لتصدير عملك كصورة.",
+            },
+          },
+        },
+      },
+    },
+    crypto: {
+      tripleDes: {
+        title: "أداة تشفير 3DES",
+        description:
+          "تشفير وفك تشفير البيانات باستخدام خوارزمية 3DES، ودعم أوضاع متعددة وحشو.",
+        input: "إدخال المحتوى",
+        key: "مفتاح",
+        mode: "الوضع",
+        padding: "الحشو",
+        encrypt: "تشفير",
+        decrypt: "فك تشفير",
+        output: "النتيجة",
+        copy: "نسخ",
+        clear: "مسح",
+        error: "خطأ",
+        example: "مثال",
+        guide: {
+          meaning: {
+            title: "مقدمة لتشفير 3DES",
+            desc: "3DES (Triple DES) هو تحسين لخوارزمية تشفير DES، حيث يقوم بتشفير البيانات ثلاث مرات باستخدام ما يصل إلى ثلاثة مفاتيح مختلفة، مما يحسن الأمان بشكل كبير. على الرغم من استبداله بـ AES، إلا أنه لا يزال يستخدم على نطاق واسع في الأنظمة القديمة وصناعات محددة.",
+          },
+          features: {
+            title: "الميزات",
+            modes: {
+              title: "دعم أوضاع متعددة",
+              desc: "يدعم أوضاعًا مختلفة مثل ECB و CBC و CFB و OFB و CTR لتلبية متطلبات الأمان المختلفة.",
+            },
+            padding: {
+              title: "حشو مرن",
+              desc: "يوفر خيارات مثل Pkcs7 و ZeroPadding و Iso10126 و NoPadding و AnsiX923 لضمان التوافق.",
+            },
+          },
+          usage: {
+            title: "دليل الاستخدام",
+            step1: {
+              title: "إدخال البيانات والمفتاح",
+              desc: "أدخل النص للتشفير / فك التشفير على اليسار وقم بتعيين المفتاح. المفتاح هو جوهر الأمان، يرجى حفظه بأمان.",
+            },
+            step2: {
+              title: "اختر الوضع",
+              desc: "اختر الوضع المناسب (يوصى بـ CBC) والحشو (يوصى بـ Pkcs7).",
+            },
+            step3: {
+              title: "تنفيذ",
+              desc: "انقر فوق تشفير أو فك تشفير. تظهر النتائج على اليمين ويمكن نسخها.",
             },
           },
         },
@@ -143,7 +247,7 @@ export default {
       generateBtn: "إنشاء الشجرة",
       copyBtn: "نسخ النتيجة",
       dragTip: "اسحب الدليل هنا",
-      ignorePatterns: "أنماط التجاهل (مفصول بفواصل)",
+      ignorePatterns: "أنماط التجاهل",
       guide: {
         meaning: {
           title: "لماذا مولد شجرة الملفات؟",
@@ -239,61 +343,6 @@ export default {
           production: {
             title: "تطبيق الإنتاج",
             desc: "يعد ضغط CSS مفتاحًا لتحسين أداء الواجهة الأمامية، ويستخدم في تدفقات بناء الإنتاج (Webpack، Vite، Gulp)، ونشر CDN (تقليل تكاليف النقل)، وتحسين الصفحة (تحسين درجات PageSpeed)، والتطوير للأجهزة المحمولة (توفير البيانات). يتطلب CSS المضغوط عادةً خرائط المصدر لتصحيح الأخطاء.",
-          },
-        },
-      },
-    },
-    graphics: {
-      colorConverter: {
-        title: "محول الألوان",
-        description:
-          "تحويل الألوان بين التنسيقات (HEX، RGB، HSL، HWB، LCH، CMYK) في الوقت الفعلي مع المعاينة والتوليد العشوائي.",
-        input: "إدخال اللون",
-        hexPlaceholder: "أدخل لون HEX (مثل #165DFF)",
-        random: "لون عشوائي",
-        clear: "مسح",
-        preview: "معاينة",
-        output: "نتائج التحويل",
-        copy: "نسخ",
-        error: "خطأ في التنسيق",
-        example: "تحميل مثال",
-        presets: {
-          title: "إعدادات مسبقة للألوان",
-          material: "ألوان Material",
-          flat: "ألوان مسطحة",
-          webSafe: "ألوان آمنة للويب",
-          gray: "تدرج رمادي",
-        },
-        guide: {
-          meaning: {
-            title: "مقدمة محول الألوان",
-            desc: "تساعد أداة محول الألوان المطورين والمصممين على التحويل السريع بين تنسيقات الألوان المختلفة (مثل Hex و RGB و HSL و HSV و CMYK) لضمان دقة الألوان عبر بيئات مختلفة.",
-          },
-          features: {
-            title: "الميزات",
-            formats: {
-              title: "دعم تنسيقات متعددة",
-              desc: "يدعم تنسيقات الألوان الشائعة المختلفة بما في ذلك Hex و RGB و HSL و HSV و CMYK.",
-            },
-            preview: {
-              title: "معاينة في الوقت الفعلي",
-              desc: "أدخل لونًا، وستظهر المعاينة ونتائج التحويل فورًا على اليمين.",
-            },
-          },
-          usage: {
-            title: "دليل الاستخدام",
-            step1: {
-              title: "إدخال اللون",
-              desc: "أدخل قيمة Hex أو قيمة RGB أو اسم اللون في مربع الإدخال.",
-            },
-            step2: {
-              title: "عرض النتائج",
-              desc: "تتعرف الأداة تلقائيًا على الإدخال وتحوله إلى تنسيقات أخرى معروضة على اليمين.",
-            },
-            step3: {
-              title: "نسخ واستخدام",
-              desc: "انقر فوق زر النسخ بجوار التنسيق المطلوب لنسخ كود اللون إلى الحافظة.",
-            },
           },
         },
       },

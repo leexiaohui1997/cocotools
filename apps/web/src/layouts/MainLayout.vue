@@ -69,6 +69,11 @@
               :to="resolvePath('/tools/graphics/color-converter')"
               >{{ $t("menu.colorConverter") }}</t-menu-item
             >
+            <t-menu-item
+              value="whiteboard"
+              :to="resolvePath('/tools/graphics/whiteboard')"
+              >{{ $t("menu.whiteboard") }}</t-menu-item
+            >
           </t-submenu>
         </t-submenu>
         <!-- 其他菜单项 -->

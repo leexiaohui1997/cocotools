@@ -10,6 +10,7 @@ export default {
     aes: "AES",
     graphics: "Graphics & Visual",
     colorConverter: "Color Converter",
+    whiteboard: "Whiteboard",
     lightMode: "Light Mode",
     darkMode: "Dark Mode",
     systemMode: "Auto",
@@ -184,6 +185,54 @@ export default {
             step3: {
               title: "Copy & Use",
               desc: "Click the copy button next to the desired format to copy the color code to your clipboard.",
+            },
+          },
+        },
+      },
+      whiteboard: {
+        title: "Whiteboard",
+        description:
+          "A simple online whiteboard tool supporting drawing, erasing, undo, redo, and more.",
+        brush: "Brush",
+        eraser: "Eraser",
+        size: "Size",
+        color: "Color",
+        background: "Background",
+        transparent: "Transparent Background",
+        opacity: "Opacity",
+        undo: "Undo",
+        redo: "Redo",
+        clear: "Clear",
+        save: "Save",
+        guide: {
+          meaning: {
+            title: "Introduction",
+            desc: "Provides a convenient online drawing environment to record inspiration anytime.",
+          },
+          features: {
+            title: "Features",
+            drawing: {
+              title: "Basic Drawing",
+              desc: "Supports custom brush color, size, and opacity.",
+            },
+            history: {
+              title: "History",
+              desc: "Supports unlimited undo and redo operations.",
+            },
+          },
+          usage: {
+            title: "Usage Guide",
+            step1: {
+              title: "Select Tool",
+              desc: "Choose brush or eraser and adjust related parameters.",
+            },
+            step2: {
+              title: "Start Creating",
+              desc: "Draw on the canvas.",
+            },
+            step3: {
+              title: "Save Work",
+              desc: "Click the save button to export your work as an image.",
             },
           },
         },

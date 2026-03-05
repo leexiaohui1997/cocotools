@@ -38,13 +38,17 @@ declare module 'vue' {
     TListItem: typeof import('tdesign-vue-next')['ListItem']
     TMenu: typeof import('tdesign-vue-next')['Menu']
     TMenuItem: typeof import('tdesign-vue-next')['MenuItem']
+    TRadioButton: typeof import('tdesign-vue-next')['RadioButton']
+    TRadioGroup: typeof import('tdesign-vue-next')['RadioGroup']
     TResult: typeof import('tdesign-vue-next')['Result']
     TRow: typeof import('tdesign-vue-next')['Row']
     TSelect: typeof import('tdesign-vue-next')['Select']
+    TSlider: typeof import('tdesign-vue-next')['Slider']
     TSpace: typeof import('tdesign-vue-next')['Space']
     TSubmenu: typeof import('tdesign-vue-next')['Submenu']
     TTabPanel: typeof import('tdesign-vue-next')['TabPanel']
     TTabs: typeof import('tdesign-vue-next')['Tabs']
     TTextarea: typeof import('tdesign-vue-next')['Textarea']
+    TTooltip: typeof import('tdesign-vue-next')['Tooltip']
   }
 }

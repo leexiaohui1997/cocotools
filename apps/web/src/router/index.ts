@@ -11,6 +11,7 @@ import FileTreeGenerator from "../pages/tools/dev/FileTreeGenerator.vue";
 import TripleDES from "../pages/tools/crypto/TripleDES.vue";
 import AES from "../pages/tools/crypto/AES.vue";
 import ColorConverter from "../pages/tools/graphics/ColorConverter.vue";
+import Whiteboard from "../pages/tools/graphics/Whiteboard.vue";
 import i18n from "../locales";
 
 const supportedLocales = [
@@ -71,6 +72,12 @@ const routes: RouteRecordRaw[] = [
         name: "ColorConverter",
         component: ColorConverter,
         meta: { title: "颜色转换器" },
+      },
+      {
+        path: "tools/graphics/whiteboard",
+        name: "Whiteboard",
+        component: Whiteboard,
+        meta: { title: "画板" },
       },
       // 其他业务页面将添加到这里
     ],

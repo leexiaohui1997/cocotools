@@ -10,6 +10,7 @@ export default {
     aes: "AES 加解密",
     graphics: "图形视觉",
     colorConverter: "颜色转换器",
+    whiteboard: "画板",
     lightMode: "亮色模式",
     darkMode: "暗色模式",
     systemMode: "跟随系统",
@@ -86,6 +87,54 @@ export default {
             step3: {
               title: "复制使用",
               desc: "点击对应格式后的复制按钮，即可将颜色代码复制到剪贴板。",
+            },
+          },
+        },
+      },
+      whiteboard: {
+        title: "画板",
+        description:
+          "一个简单的在线画板工具，支持绘图、擦除、撤销、重做等功能。",
+        brush: "画笔",
+        eraser: "橡皮擦",
+        size: "大小",
+        color: "颜色",
+        background: "背景",
+        transparent: "透明背景",
+        opacity: "透明度",
+        undo: "撤销",
+        redo: "重做",
+        clear: "清空",
+        save: "保存",
+        guide: {
+          meaning: {
+            title: "画板简介",
+            desc: "提供一个便捷的在线绘图环境，随手记录灵感。",
+          },
+          features: {
+            title: "功能特点",
+            drawing: {
+              title: "基础绘图",
+              desc: "支持自定义画笔颜色、大小和透明度。",
+            },
+            history: {
+              title: "历史记录",
+              desc: "支持无限次撤销和重做操作。",
+            },
+          },
+          usage: {
+            title: "使用指南",
+            step1: {
+              title: "选择工具",
+              desc: "选择画笔或橡皮擦，并调整相关参数。",
+            },
+            step2: {
+              title: "开始创作",
+              desc: "在画布上进行绘制。",
+            },
+            step3: {
+              title: "保存作品",
+              desc: "点击保存按钮将作品导出为图片。",
             },
           },
         },

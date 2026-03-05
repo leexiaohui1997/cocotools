@@ -10,6 +10,7 @@ export default {
     aes: "AES 加解密",
     graphics: "圖形視覺",
     colorConverter: "顏色轉換器",
+    whiteboard: "畫板",
     lightMode: "亮色模式",
     darkMode: "暗色模式",
     systemMode: "跟隨系統",
@@ -152,6 +153,54 @@ export default {
             step3: {
               title: "複製使用",
               desc: "點擊對應格式後的複製按鈕，即可將顏色代碼複製到剪貼簿。",
+            },
+          },
+        },
+      },
+      whiteboard: {
+        title: "畫板",
+        description:
+          "一個簡單的線上畫板工具，支援繪圖、擦除、復原、重做等功能。",
+        brush: "畫筆",
+        eraser: "橡皮擦",
+        size: "大小",
+        color: "顏色",
+        background: "背景",
+        transparent: "透明背景",
+        opacity: "透明度",
+        undo: "復原",
+        redo: "重做",
+        clear: "清空",
+        save: "儲存",
+        guide: {
+          meaning: {
+            title: "畫板簡介",
+            desc: "提供一個便捷的線上繪圖環境，隨手記錄靈感。",
+          },
+          features: {
+            title: "功能特點",
+            drawing: {
+              title: "基礎繪圖",
+              desc: "支援自定義畫筆顏色、大小和透明度。",
+            },
+            history: {
+              title: "歷史記錄",
+              desc: "支援無限次復原和重做操作。",
+            },
+          },
+          usage: {
+            title: "使用指南",
+            step1: {
+              title: "選擇工具",
+              desc: "選擇畫筆或橡皮擦，並調整相關參數。",
+            },
+            step2: {
+              title: "開始創作",
+              desc: "在畫布上進行繪製。",
+            },
+            step3: {
+              title: "儲存作品",
+              desc: "點擊儲存按鈕將作品匯出為圖片。",
             },
           },
         },
