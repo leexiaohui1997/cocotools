@@ -4,6 +4,7 @@ export default {
     tools: "工具分类",
     devTools: "开发者工具",
     cssMinify: "CSS 压缩工具",
+    fileTreeGenerator: "文件树生成器",
     lightMode: "亮色模式",
     darkMode: "暗色模式",
     systemMode: "跟随系统",
@@ -30,6 +31,49 @@ export default {
     rate: "压缩率",
   },
   tool: {
+    fileTreeGenerator: {
+      title: "文件树生成器",
+      description: "生成文件夹的 ASCII 树形结构，方便文档编写和沟通。",
+      inputTitle: "选择文件夹",
+      outputTitle: "生成结果",
+      selectDirBtn: "选择文件夹",
+      generateBtn: "生成树形图",
+      copyBtn: "复制结果",
+      dragTip: "拖拽文件夹到此处",
+      ignorePatterns: "忽略模式",
+      guide: {
+        meaning: {
+          title: "文件树生成器的意义",
+          desc: "在编写技术文档、README 或进行代码审查时，清晰的项目结构展示至关重要。ASCII 文件树能直观地展示目录层级，帮助开发者快速理解项目架构。",
+        },
+        features: {
+          title: "功能特点",
+          dragDrop: {
+            title: "拖拽支持",
+            desc: "支持直接拖拽文件夹到页面，自动解析目录结构。",
+          },
+          customIgnore: {
+            title: "自定义忽略",
+            desc: "支持自定义忽略文件或文件夹（如 node_modules, .git 等），让输出更简洁。",
+          },
+        },
+        usage: {
+          title: "使用指南",
+          step1: {
+            title: "选择或拖拽文件夹",
+            desc: "点击按钮选择文件夹，或直接将文件夹拖拽到指定区域。",
+          },
+          step2: {
+            title: "配置忽略项",
+            desc: "如有需要，可以修改默认的忽略模式，过滤掉不需要显示的文件。",
+          },
+          step3: {
+            title: "获取结果",
+            desc: "生成的树形图将显示在右侧，点击复制按钮即可使用。",
+          },
+        },
+      },
+    },
     cssMinify: {
       title: "CSS 压缩工具",
       description:

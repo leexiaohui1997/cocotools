@@ -4,6 +4,7 @@ export default {
     tools: "Strumenti",
     devTools: "Strumenti per sviluppatori",
     cssMinify: "Minificatore CSS",
+    fileTreeGenerator: "Generatore Albero File",
     lightMode: "Modalità chiara",
     darkMode: "Modalità scura",
     systemMode: "Auto",
@@ -30,6 +31,50 @@ export default {
     rate: "Tasso",
   },
   tool: {
+    fileTreeGenerator: {
+      title: "Generatore Albero File",
+      description:
+        "Genera una struttura ad albero ASCII delle directory del progetto per la documentazione e la visualizzazione del codice.",
+      inputTitle: "Seleziona Directory",
+      outputTitle: "Risultato Generato",
+      selectDirBtn: "Seleziona Directory",
+      generateBtn: "Genera Albero",
+      copyBtn: "Copia Risultato",
+      dragTip: "Trascina qui la directory",
+      ignorePatterns: "Pattern da ignorare (separati da virgola)",
+      guide: {
+        meaning: {
+          title: "Perché Generatore Albero File?",
+          desc: "Una chiara visualizzazione della struttura del progetto è fondamentale quando si scrive documentazione tecnica, README o si effettuano revisioni del codice. Gli alberi di file ASCII mostrano intuitivamente la gerarchia delle directory, aiutando gli sviluppatori a comprendere rapidamente l'architettura del progetto.",
+        },
+        features: {
+          title: "Caratteristiche",
+          dragDrop: {
+            title: "Supporto Drag & Drop",
+            desc: "Supporta il trascinamento delle cartelle direttamente nella pagina per analizzare automaticamente la struttura della directory.",
+          },
+          customIgnore: {
+            title: "Ignora Personalizzato",
+            desc: "Supporta file o cartelle da ignorare personalizzati (ad es. node_modules, .git) per mantenere l'output conciso.",
+          },
+        },
+        usage: {
+          title: "Guida all'uso",
+          step1: {
+            title: "Seleziona o Trascina Cartella",
+            desc: "Clicca il pulsante per selezionare una cartella, o trascina una cartella direttamente nell'area designata.",
+          },
+          step2: {
+            title: "Configura Ignora",
+            desc: "Modifica i pattern di esclusione predefiniti se necessario per filtrare i file indesiderati.",
+          },
+          step3: {
+            title: "Ottieni Risultato",
+            desc: "L'albero generato verrà visualizzato sulla destra. Clicca su copia per usarlo.",
+          },
+        },
+      },
+    },
     cssMinify: {
       title: "Minificatore CSS",
       description:

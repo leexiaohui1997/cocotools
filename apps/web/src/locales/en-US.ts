@@ -4,6 +4,7 @@ export default {
     tools: "Tools",
     devTools: "Developer Tools",
     cssMinify: "CSS Minifier",
+    fileTreeGenerator: "File Tree Generator",
     lightMode: "Light Mode",
     darkMode: "Dark Mode",
     systemMode: "Auto",
@@ -30,6 +31,50 @@ export default {
     rate: "Rate",
   },
   tool: {
+    fileTreeGenerator: {
+      title: "File Tree Generator",
+      description:
+        "Generate ASCII tree structure of project directories for documentation and code display.",
+      inputTitle: "Select Directory",
+      outputTitle: "Generated Result",
+      selectDirBtn: "Select Directory",
+      generateBtn: "Generate Tree",
+      copyBtn: "Copy Result",
+      dragTip: "Drag directory here",
+      ignorePatterns: "Ignore Patterns (comma separated)",
+      guide: {
+        meaning: {
+          title: "Why File Tree Generator?",
+          desc: "Clear project structure display is crucial when writing technical documentation, READMEs, or conducting code reviews. ASCII file trees intuitively show directory hierarchy, helping developers quickly understand project architecture.",
+        },
+        features: {
+          title: "Features",
+          dragDrop: {
+            title: "Drag & Drop Support",
+            desc: "Support dragging folders directly to the page to automatically parse directory structure.",
+          },
+          customIgnore: {
+            title: "Custom Ignore",
+            desc: "Support custom ignore files or folders (e.g., node_modules, .git) to keep output concise.",
+          },
+        },
+        usage: {
+          title: "Usage Guide",
+          step1: {
+            title: "Select or Drag Folder",
+            desc: "Click the button to select a folder, or drag a folder directly to the designated area.",
+          },
+          step2: {
+            title: "Configure Ignore",
+            desc: "Modify default ignore patterns if needed to filter out unwanted files.",
+          },
+          step3: {
+            title: "Get Result",
+            desc: "The generated tree will be displayed on the right. Click copy to use it.",
+          },
+        },
+      },
+    },
     cssMinify: {
       title: "CSS Minifier",
       description:

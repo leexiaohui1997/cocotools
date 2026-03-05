@@ -37,6 +37,11 @@
               :to="resolvePath('/tools/dev/css-minify')"
               >{{ $t("menu.cssMinify") }}</t-menu-item
             >
+            <t-menu-item
+              value="file-tree-generator"
+              :to="resolvePath('/tools/dev/file-tree-generator')"
+              >{{ $t("menu.fileTreeGenerator") }}</t-menu-item
+            >
           </t-submenu>
         </t-submenu>
         <!-- 其他菜单项 -->

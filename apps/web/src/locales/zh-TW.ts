@@ -4,6 +4,7 @@ export default {
     tools: "工具分類",
     devTools: "開發者工具",
     cssMinify: "CSS 壓縮工具",
+    fileTreeGenerator: "檔案樹生成器",
     lightMode: "亮色模式",
     darkMode: "暗色模式",
     systemMode: "跟隨系統",
@@ -30,6 +31,49 @@ export default {
     rate: "壓縮率",
   },
   tool: {
+    fileTreeGenerator: {
+      title: "檔案樹生成器",
+      description: "生成專案目錄的 ASCII 樹狀結構，適用於文件和程式碼展示。",
+      inputTitle: "選擇目錄",
+      outputTitle: "生成結果",
+      selectDirBtn: "選擇目錄",
+      generateBtn: "生成樹狀圖",
+      copyBtn: "複製結果",
+      dragTip: "拖曳目錄到此處",
+      ignorePatterns: "忽略模式 (以逗號分隔)",
+      guide: {
+        meaning: {
+          title: "為什麼需要檔案樹生成器？",
+          desc: "在編寫技術文件、README 或進行程式碼審查時，清晰的專案結構展示至關重要。ASCII 檔案樹直觀地顯示目錄層級，幫助開發者快速理解專案架構。",
+        },
+        features: {
+          title: "功能特點",
+          dragDrop: {
+            title: "拖放支援",
+            desc: "支援直接將資料夾拖曳到頁面，自動解析目錄結構。",
+          },
+          customIgnore: {
+            title: "自定義忽略",
+            desc: "支援自定義忽略檔案或資料夾（如 node_modules, .git），保持輸出簡潔。",
+          },
+        },
+        usage: {
+          title: "使用指南",
+          step1: {
+            title: "選擇或拖曳資料夾",
+            desc: "點擊按鈕選擇資料夾，或直接將資料夾拖曳到指定區域。",
+          },
+          step2: {
+            title: "配置忽略項",
+            desc: "如有需要，修改預設的忽略模式以過濾掉不需要的檔案。",
+          },
+          step3: {
+            title: "獲取結果",
+            desc: "生成的樹狀圖將顯示在右側。點擊複製即可使用。",
+          },
+        },
+      },
+    },
     cssMinify: {
       title: "CSS 壓縮工具",
       description:

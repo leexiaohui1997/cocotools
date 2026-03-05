@@ -4,6 +4,7 @@ export default {
     tools: "도구",
     devTools: "개발자 도구",
     cssMinify: "CSS 압축기",
+    fileTreeGenerator: "파일 트리 생성기",
     lightMode: "라이트 모드",
     darkMode: "다크 모드",
     systemMode: "시스템",
@@ -30,6 +31,50 @@ export default {
     rate: "비율",
   },
   tool: {
+    fileTreeGenerator: {
+      title: "파일 트리 생성기",
+      description:
+        "프로젝트 디렉토리의 ASCII 트리 구조를 생성하여 문서 작성 및 코드 공유를 돕습니다.",
+      inputTitle: "디렉토리 선택",
+      outputTitle: "생성 결과",
+      selectDirBtn: "디렉토리 선택",
+      generateBtn: "트리 생성",
+      copyBtn: "결과 복사",
+      dragTip: "여기로 디렉토리를 드래그하세요",
+      ignorePatterns: "무시할 패턴 (쉼표로 구분)",
+      guide: {
+        meaning: {
+          title: "파일 트리 생성기의 의미",
+          desc: "기술 문서나 README 작성, 코드 리뷰 시 프로젝트 구조를 명확하게 보여주는 것은 매우 중요합니다. ASCII 파일 트리는 디렉토리 계층 구조를 직관적으로 보여주어 개발자가 프로젝트 아키텍처를 빠르게 이해하도록 돕습니다.",
+        },
+        features: {
+          title: "기능",
+          dragDrop: {
+            title: "드래그 앤 드롭 지원",
+            desc: "폴더를 페이지로 직접 드래그하여 디렉토리 구조를 자동으로 파싱할 수 있습니다.",
+          },
+          customIgnore: {
+            title: "사용자 정의 무시",
+            desc: "출력을 간결하게 유지하기 위해 node_modules, .git 등 무시할 파일이나 폴더를 사용자 정의할 수 있습니다.",
+          },
+        },
+        usage: {
+          title: "사용 가이드",
+          step1: {
+            title: "폴더 선택 또는 드래그",
+            desc: "버튼을 클릭하여 폴더를 선택하거나 지정된 영역으로 폴더를 직접 드래그하세요.",
+          },
+          step2: {
+            title: "무시 패턴 설정",
+            desc: "필요한 경우 기본 무시 패턴을 수정하여 원하지 않는 파일을 필터링하세요.",
+          },
+          step3: {
+            title: "결과 확인",
+            desc: "생성된 트리 구조가 오른쪽에 표시됩니다. 복사 버튼을 클릭하여 사용하세요.",
+          },
+        },
+      },
+    },
     cssMinify: {
       title: "CSS 압축기",
       description:

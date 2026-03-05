@@ -4,6 +4,7 @@ export default {
     tools: "ツール",
     devTools: "開発者ツール",
     cssMinify: "CSS 圧縮",
+    fileTreeGenerator: "ファイルツリー生成",
     lightMode: "ライトモード",
     darkMode: "ダークモード",
     systemMode: "システム",
@@ -30,6 +31,50 @@ export default {
     rate: "圧縮率",
   },
   tool: {
+    fileTreeGenerator: {
+      title: "ファイルツリー生成",
+      description:
+        "プロジェクトディレクトリのASCIIツリー構造を生成し、ドキュメント作成やコード共有に役立ちます。",
+      inputTitle: "ディレクトリを選択",
+      outputTitle: "生成結果",
+      selectDirBtn: "ディレクトリを選択",
+      generateBtn: "ツリーを生成",
+      copyBtn: "結果をコピー",
+      dragTip: "ここにディレクトリをドラッグ",
+      ignorePatterns: "除外パターン (カンマ区切り)",
+      guide: {
+        meaning: {
+          title: "ファイルツリー生成の意義",
+          desc: "技術ドキュメントやREADMEの作成、コードレビューの際、プロジェクト構造を明確に表示することは非常に重要です。ASCIIファイルツリーはディレクトリ階層を直感的に示し、開発者がプロジェクトアーキテクチャを素早く理解するのに役立ちます。",
+        },
+        features: {
+          title: "機能の特徴",
+          dragDrop: {
+            title: "ドラッグ＆ドロップ対応",
+            desc: "フォルダをページに直接ドラッグして、ディレクトリ構造を自動的に解析できます。",
+          },
+          customIgnore: {
+            title: "カスタム除外設定",
+            desc: "node_modulesや.gitなどの不要なファイルやフォルダを除外設定して、出力を簡潔に保つことができます。",
+          },
+        },
+        usage: {
+          title: "使用ガイド",
+          step1: {
+            title: "フォルダの選択またはドラッグ",
+            desc: "ボタンをクリックしてフォルダを選択するか、指定された領域に直接フォルダをドラッグします。",
+          },
+          step2: {
+            title: "除外設定の構成",
+            desc: "必要に応じてデフォルトの除外パターンを変更し、不要なファイルをフィルタリングします。",
+          },
+          step3: {
+            title: "結果の取得",
+            desc: "生成されたツリー構造が右側に表示されます。コピーボタンをクリックして使用できます。",
+          },
+        },
+      },
+    },
     cssMinify: {
       title: "CSS 圧縮ツール",
       description:

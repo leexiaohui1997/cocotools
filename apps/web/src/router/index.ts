@@ -7,6 +7,7 @@ import MainLayout from "../layouts/MainLayout.vue";
 import Dashboard from "../pages/Dashboard.vue";
 import NotFound from "../pages/NotFound.vue";
 import CssMinify from "../pages/tools/dev/CssMinify.vue";
+import FileTreeGenerator from "../pages/tools/dev/FileTreeGenerator.vue";
 import i18n from "../locales";
 
 const supportedLocales = [
@@ -43,6 +44,12 @@ const routes: RouteRecordRaw[] = [
         name: "CssMinify",
         component: CssMinify,
         meta: { title: "CSS 压缩" },
+      },
+      {
+        path: "tools/dev/file-tree-generator",
+        name: "FileTreeGenerator",
+        component: FileTreeGenerator,
+        meta: { title: "文件树生成器" },
       },
       // 其他业务页面将添加到这里
     ],
