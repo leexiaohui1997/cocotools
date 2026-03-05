@@ -3,6 +3,7 @@
     <t-aside :width="collapsed ? '64px' : '232px'" class="main-aside">
       <t-menu
         v-model="activeMenu"
+        v-model:expanded="expanded"
         :collapsed="collapsed"
         theme="light"
         height="100%"
@@ -19,10 +20,27 @@
           </template>
           仪表盘
         </t-menu-item>
+        <t-submenu value="tools" title="工具分类">
+          <template #icon>
+            <t-icon name="tools" />
+          </template>
+          <t-submenu value="dev-tools" title="开发者工具">
+            <template #icon>
+              <t-icon
+                :name="
+                  expanded.includes('dev-tools') ? 'folder-open' : 'folder'
+                "
+              />
+            </template>
+            <t-menu-item value="cssminify" to="/tools/dev/css-minify"
+              >CSS 压缩工具</t-menu-item
+            >
+          </t-submenu>
+        </t-submenu>
         <!-- 其他菜单项 -->
       </t-menu>
     </t-aside>
-    <t-layout>
+    <t-layout class="content-layout">
       <t-header class="main-header">
         <div class="header-left">
           <t-button variant="text" shape="square" @click="toggleSidebar">
@@ -54,13 +72,15 @@
           </t-dropdown>
         </div>
       </t-header>
-      <t-content class="main-content">
-        <router-view />
-      </t-content>
-      <t-footer class="main-footer">
-        Copyright © 2023-{{ new Date().getFullYear() }} Cocotools. All Rights
-        Reserved.
-      </t-footer>
+      <t-layout class="scroll-container">
+        <t-content class="main-content">
+          <router-view />
+        </t-content>
+        <t-footer class="main-footer">
+          Copyright © 2023-{{ new Date().getFullYear() }} Cocotools. All Rights
+          Reserved.
+        </t-footer>
+      </t-layout>
     </t-layout>
   </t-layout>
 </template>
@@ -72,6 +92,7 @@ import { useTheme } from "../composables/useTheme";
 
 const route = useRoute();
 const collapsed = ref(false);
+const expanded = ref<string[]>([]);
 const { theme, setTheme } = useTheme();
 
 const activeMenu = computed(() => {
@@ -116,7 +137,20 @@ const handleThemeChange = (mode: "light" | "dark" | "auto") => {
   width: 100% !important;
 }
 
+:deep(.t-menu__item .t-icon),
+:deep(.t-submenu__title .t-icon) {
+  font-size: 18px;
+}
+
+.content-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
 .main-header {
+  flex-shrink: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -125,10 +159,19 @@ const handleThemeChange = (mode: "light" | "dark" | "auto") => {
   border-bottom: 1px solid var(--td-component-stroke);
 }
 
-.main-content {
-  padding: 24px;
+.scroll-container {
+  flex: 1;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  padding: 24px;
   background-color: var(--td-bg-color-page);
+  display: flex;
+  flex-direction: column;
 }
 
 .main-footer {

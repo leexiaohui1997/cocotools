@@ -6,6 +6,7 @@ import {
 import MainLayout from "../layouts/MainLayout.vue";
 import Dashboard from "../pages/Dashboard.vue";
 import NotFound from "../pages/NotFound.vue";
+import CssMinify from "../pages/tools/dev/CssMinify.vue";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -18,6 +19,12 @@ const routes: RouteRecordRaw[] = [
         name: "Dashboard",
         component: Dashboard,
         meta: { title: "仪表盘" },
+      },
+      {
+        path: "tools/dev/css-minify",
+        name: "CssMinify",
+        component: CssMinify,
+        meta: { title: "CSS 压缩" },
       },
       // 其他业务页面将添加到这里
     ],

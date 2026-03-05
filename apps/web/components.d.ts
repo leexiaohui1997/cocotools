@@ -17,6 +17,8 @@ declare module 'vue' {
     TAside: typeof import('tdesign-vue-next')['Aside']
     TButton: typeof import('tdesign-vue-next')['Button']
     TCard: typeof import('tdesign-vue-next')['Card']
+    TCheckbox: typeof import('tdesign-vue-next')['Checkbox']
+    TCol: typeof import('tdesign-vue-next')['Col']
     TContent: typeof import('tdesign-vue-next')['Content']
     TDropdown: typeof import('tdesign-vue-next')['Dropdown']
     TDropdownItem: typeof import('tdesign-vue-next')['DropdownItem']
@@ -28,5 +30,8 @@ declare module 'vue' {
     TMenu: typeof import('tdesign-vue-next')['Menu']
     TMenuItem: typeof import('tdesign-vue-next')['MenuItem']
     TResult: typeof import('tdesign-vue-next')['Result']
+    TRow: typeof import('tdesign-vue-next')['Row']
+    TSubmenu: typeof import('tdesign-vue-next')['Submenu']
+    TTextarea: typeof import('tdesign-vue-next')['Textarea']
   }
 }
