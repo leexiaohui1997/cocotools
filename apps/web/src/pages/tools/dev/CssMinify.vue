@@ -1,7 +1,7 @@
 <template>
   <t-card
-    title="CSS 压缩工具"
-    description="移除多余的空格、注释和换行符，精简 CSS 代码体积，使其更适合生产环境部署。"
+    :title="$t('tool.cssMinify.title')"
+    :description="$t('tool.cssMinify.description')"
     class="css-minify-card"
   >
     <t-row :gutter="[16, 16]" class="full-height-row">
@@ -10,24 +10,27 @@
         <div class="column-container">
           <div class="area-header">
             <div class="title-group">
-              <h3>输入 CSS</h3>
+              <h3>{{ $t("tool.cssMinify.inputTitle") }}</h3>
               <span class="size-info" v-if="inputCss">
                 {{ formatSize(inputSize) }}
               </span>
             </div>
             <div class="toolbar">
-              <t-button variant="text" size="small" @click="loadExample"
-                >载入示例</t-button
-              >
-              <t-button variant="text" size="small" @click="triggerFileUpload"
-                >上传 CSS 文件</t-button
+              <t-button variant="text" size="small" @click="loadExample">{{
+                $t("common.loadExample")
+              }}</t-button>
+              <t-button
+                variant="text"
+                size="small"
+                @click="triggerFileUpload"
+                >{{ $t("tool.cssMinify.uploadBtn") }}</t-button
               >
               <t-button
                 variant="text"
                 theme="danger"
                 size="small"
                 @click="clearInput"
-                >清空</t-button
+                >{{ $t("common.clear") }}</t-button
               >
               <input
                 type="file"
@@ -61,23 +64,27 @@
         <div class="column-container">
           <div class="area-header">
             <div class="title-group">
-              <h3>压缩结果</h3>
+              <h3>{{ $t("tool.cssMinify.outputTitle") }}</h3>
               <span class="size-info" v-if="compressedCss">
                 {{ formatSize(compressedSize) }}
-                <span class="rate">| 压缩率: {{ compressionRate }}</span>
+                <span class="rate"
+                  >| {{ $t("common.rate") }}: {{ compressionRate }}</span
+                >
               </span>
             </div>
             <div class="toolbar">
-              <t-checkbox v-model="enableWordWrap">自动换行</t-checkbox>
-              <t-button theme="primary" size="small" @click="compressCss"
-                >压缩 CSS</t-button
-              >
+              <t-checkbox v-model="enableWordWrap">{{
+                $t("common.autoWrap")
+              }}</t-checkbox>
+              <t-button theme="primary" size="small" @click="compressCss">{{
+                $t("tool.cssMinify.compressBtn")
+              }}</t-button>
               <t-button
                 variant="outline"
                 size="small"
                 @click="copyResult"
                 :disabled="!compressedCss"
-                >复制结果</t-button
+                >{{ $t("tool.cssMinify.copyBtn") }}</t-button
               >
             </div>
           </div>
@@ -100,79 +107,88 @@
   <div class="guide-container">
     <div class="guide-section">
       <h3 class="section-title">
-        <t-icon name="help-circle" /> CSS 压缩的意义
+        <t-icon name="help-circle" />
+        {{ $t("tool.cssMinify.guide.meaning.title") }}
       </h3>
       <p class="section-desc">
-        CSS
-        压缩是网页性能优化的核心环节。通过移除空白、注释和冗余代码，优化代码结构（合并规则、缩短颜色值），可将文件体积减小
-        20-60%，显著提升页面加载速度，降低带宽成本。这对生产环境部署、移动端开发、CDN
-        分发至关重要，直接影响用户体验和 SEO 排名。压缩后的 CSS
-        保持功能完全不变，是前端工程化的标准实践。
+        {{ $t("tool.cssMinify.guide.meaning.desc") }}
       </p>
     </div>
 
     <div class="guide-section">
-      <h3 class="section-title"><t-icon name="control-platform" /> 功能特点</h3>
+      <h3 class="section-title">
+        <t-icon name="control-platform" />
+        {{ $t("tool.cssMinify.guide.features.title") }}
+      </h3>
       <div class="feature-grid">
         <div class="feature-item">
-          <h4><t-icon name="edit-1" /> 编辑器 + 文件双流程</h4>
+          <h4>
+            <t-icon name="edit-1" />
+            {{ $t("tool.cssMinify.guide.features.editor.title") }}
+          </h4>
           <p>
-            支持粘贴 CSS、拖拽 .css
-            文件或载入示例，工具会自动读取并展示，支持一键清空和复制，方便随时对比。
+            {{ $t("tool.cssMinify.guide.features.editor.desc") }}
           </p>
         </div>
         <div class="feature-item">
-          <h4><t-icon name="chart-bar" /> 生产级指标看板</h4>
+          <h4>
+            <t-icon name="chart-bar" />
+            {{ $t("tool.cssMinify.guide.features.stats.title") }}
+          </h4>
           <p>
-            实时统计原始体积、压缩后体积、压缩率和预计 CDN
-            带宽节省，帮助评估性能收益和支撑优化决策。
+            {{ $t("tool.cssMinify.guide.features.stats.desc") }}
           </p>
         </div>
         <div class="feature-item">
-          <h4><t-icon name="rocket" /> 无损压缩规则</h4>
+          <h4>
+            <t-icon name="rocket" />
+            {{ $t("tool.cssMinify.guide.features.lossless.title") }}
+          </h4>
           <p>
-            一键完成空白符与注释删除、零值优化 (0px→0)、颜色缩写
-            (#ffffff→#fff)、属性合并，确保最终呈现，完全不改变 CSS 行为。
+            {{ $t("tool.cssMinify.guide.features.lossless.desc") }}
           </p>
         </div>
         <div class="feature-item">
-          <h4><t-icon name="shield-check" /> CI/CD 级别安全</h4>
+          <h4>
+            <t-icon name="shield-check" />
+            {{ $t("tool.cssMinify.guide.features.security.title") }}
+          </h4>
           <p>
-            全部逻辑在浏览器端完成，不上传任何样式文件。一键复制或下载
-            style.min.css，即可安全接入构建流程。
+            {{ $t("tool.cssMinify.guide.features.security.desc") }}
           </p>
         </div>
       </div>
     </div>
 
     <div class="guide-section">
-      <h3 class="section-title"><t-icon name="book-open" /> 使用指南</h3>
+      <h3 class="section-title">
+        <t-icon name="book-open" /> {{ $t("tool.cssMinify.guide.usage.title") }}
+      </h3>
       <div class="step-list">
         <div class="step-item">
           <span class="step-num">1</span>
           <div class="step-content">
-            <h4>收集样式</h4>
+            <h4>{{ $t("tool.cssMinify.guide.usage.step1.title") }}</h4>
             <p>
-              粘贴 CSS，拖放 .css 文件或加载示例，确认编辑器中显示原始内容。
+              {{ $t("tool.cssMinify.guide.usage.step1.desc") }}
             </p>
           </div>
         </div>
         <div class="step-item">
           <span class="step-num">2</span>
           <div class="step-content">
-            <h4>调整设置</h4>
+            <h4>{{ $t("tool.cssMinify.guide.usage.step2.title") }}</h4>
             <p>
-              选中“自动换行”方便查看，默认开启所有压缩优化规则，无需额外配置。
+              {{ $t("tool.cssMinify.guide.usage.step2.desc") }}
             </p>
           </div>
         </div>
         <div class="step-item">
           <span class="step-num">3</span>
           <div class="step-content">
-            <h4>输出结果</h4>
+            <h4>{{ $t("tool.cssMinify.guide.usage.step3.title") }}</h4>
             <p>
-              点击“压缩
-              CSS”，核对无误后，随时复制、下载或直接替换项目中的/发布文件。
+              {{ $t("tool.cssMinify.guide.usage.step3.desc") }}
             </p>
           </div>
         </div>
@@ -180,34 +196,35 @@
     </div>
 
     <div class="guide-section">
-      <h3 class="section-title"><t-icon name="code" /> 技术介绍</h3>
+      <h3 class="section-title">
+        <t-icon name="code" /> {{ $t("tool.cssMinify.guide.tech.title") }}
+      </h3>
       <div class="tech-content">
         <div class="tech-item">
-          <h4><t-icon name="cpu" /> CSS 压缩原理</h4>
+          <h4>
+            <t-icon name="cpu" />
+            {{ $t("tool.cssMinify.guide.tech.principle.title") }}
+          </h4>
           <p>
-            CSS
-            压缩通过去除冗余字符（空格、换行、注释）、优化代码结构（合并规则、缩短颜色值）、简化语法（移除非必要分号、引号）来减小文件大小，压缩过程确保
-            CSS 功能完全不变，仅改变代码的物理表现，可将文件减小
-            20-60%，显著提升网页加载速度。
+            {{ $t("tool.cssMinify.guide.tech.principle.desc") }}
           </p>
         </div>
         <div class="tech-item">
-          <h4><t-icon name="layers" /> 压缩优化技术</h4>
+          <h4>
+            <t-icon name="layers" />
+            {{ $t("tool.cssMinify.guide.tech.optimization.title") }}
+          </h4>
           <p>
-            CSS
-            压缩包括多种优化技术：空白前移除（删除空格、换行、缩进）、注释清除、颜色值简化
-            (#ffffff→#fff)、零值优化 (0px→0)、属性合并 (margin
-            四个值合并)、选择器去重、无用代码移除。高级压缩还能支持属性排序、媒体查询合并、@import
-            内联等，进一步减小体积。
+            {{ $t("tool.cssMinify.guide.tech.optimization.desc") }}
           </p>
         </div>
         <div class="tech-item">
-          <h4><t-icon name="server" /> 生产环境应用</h4>
+          <h4>
+            <t-icon name="server" />
+            {{ $t("tool.cssMinify.guide.tech.production.title") }}
+          </h4>
           <p>
-            CSS 压缩是前端性能优化的关键环节，应用于生产构建流程
-            (Webpack、Vite、Gulp)、CDN 部署 (减少传输成本)、页面优化 (提升
-            PageSpeed 评分)、移动端开发 (节省流量)。压缩后的 CSS
-            通常需要保留源码版本用于调试，并使用 SourceMap 映射方便问题定位。
+            {{ $t("tool.cssMinify.guide.tech.production.desc") }}
           </p>
         </div>
       </div>
@@ -220,6 +237,9 @@ import { ref, computed } from "vue";
 import { MessagePlugin } from "tdesign-vue-next";
 import { VueMonacoEditor } from "@guolao/vue-monaco-editor";
 import { useTheme } from "../../../composables/useTheme";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const inputCss = ref("");
 const compressedCss = ref("");
@@ -321,11 +341,11 @@ const readFileContent = (file: File) => {
   reader.onload = (e) => {
     if (e.target?.result) {
       inputCss.value = e.target.result as string;
-      MessagePlugin.success("文件加载成功");
+      MessagePlugin.success(t("common.fileLoaded"));
     }
   };
   reader.onerror = () => {
-    MessagePlugin.error("文件读取失败");
+    MessagePlugin.error(t("common.fileLoadFail"));
   };
   reader.readAsText(file);
 };
@@ -346,7 +366,7 @@ const handleDrop = (event: DragEvent) => {
     if (file.name.endsWith(".css") || file.type === "text/css") {
       readFileContent(file);
     } else {
-      MessagePlugin.warning("请拖拽 CSS 文件");
+      MessagePlugin.warning(t("tool.cssMinify.dragTip"));
     }
   }
 };
@@ -354,12 +374,12 @@ const handleDrop = (event: DragEvent) => {
 const clearInput = () => {
   inputCss.value = "";
   compressedCss.value = "";
-  MessagePlugin.info("已清空");
+  MessagePlugin.info(t("common.cleared"));
 };
 
 const compressCss = () => {
   if (!inputCss.value.trim()) {
-    MessagePlugin.warning("请输入 CSS 代码");
+    MessagePlugin.warning(t("common.inputEmpty"));
     return;
   }
 
@@ -385,10 +405,10 @@ const compressCss = () => {
     css = css.replace(/\s*([{}:;,])\s*/g, "$1");
 
     compressedCss.value = css;
-    MessagePlugin.success("压缩成功");
+    MessagePlugin.success(t("common.compressSuccess"));
   } catch (error) {
     console.error(error);
-    MessagePlugin.error("压缩过程出错");
+    MessagePlugin.error(t("common.compressFail"));
   }
 };
 
@@ -398,10 +418,10 @@ const copyResult = () => {
   navigator.clipboard
     .writeText(compressedCss.value)
     .then(() => {
-      MessagePlugin.success("已复制到剪贴板");
+      MessagePlugin.success(t("common.copySuccess"));
     })
     .catch(() => {
-      MessagePlugin.error("复制失败");
+      MessagePlugin.error(t("common.copyFail"));
     });
 };
 </script>
@@ -424,10 +444,6 @@ const copyResult = () => {
 .css-minify-card :deep(.t-card__body) {
   padding: 16px;
   overflow: visible; /* Ensure content is not clipped */
-}
-
-.full-height-row {
-  /* height: 100%; */
 }
 
 .column-container {

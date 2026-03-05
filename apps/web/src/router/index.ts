@@ -7,13 +7,31 @@ import MainLayout from "../layouts/MainLayout.vue";
 import Dashboard from "../pages/Dashboard.vue";
 import NotFound from "../pages/NotFound.vue";
 import CssMinify from "../pages/tools/dev/CssMinify.vue";
+import i18n from "../locales";
+
+const supportedLocales = [
+  "zh-CN",
+  "zh-TW",
+  "en-US",
+  "ja-JP",
+  "ar-KW",
+  "it-IT",
+  "ko-KR",
+  "ru-RU",
+];
 
 const routes: RouteRecordRaw[] = [
   {
-    path: "/",
+    path: "/:lang(zh-CN|zh-TW|en-US|ja-JP|ar-KW|it-IT|ko-KR|ru-RU)?",
     component: MainLayout,
-    redirect: "/dashboard",
     children: [
+      {
+        path: "",
+        redirect: (to) => {
+          const lang = to.params.lang as string;
+          return lang ? `/${lang}/dashboard` : "/dashboard";
+        },
+      },
       {
         path: "dashboard",
         name: "Dashboard",
@@ -39,6 +57,26 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, _from, next) => {
+  const lang = to.params.lang as string;
+
+  // 1. 如果路径中有语言参数，且在支持列表中，则设置为当前语言
+  if (lang && supportedLocales.includes(lang)) {
+    if (i18n.global.locale.value !== lang) {
+      i18n.global.locale.value = lang as any;
+      localStorage.setItem("locale", lang);
+    }
+  } else {
+    // 2. 如果路径中没有语言参数，则默认为 zh-CN
+    const defaultLang = "zh-CN";
+    if (i18n.global.locale.value !== defaultLang) {
+      i18n.global.locale.value = defaultLang as any;
+      localStorage.setItem("locale", defaultLang);
+    }
+  }
+  next();
 });
 
 export default router;

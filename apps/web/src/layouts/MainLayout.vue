@@ -14,17 +14,17 @@
             <span v-else class="logo-text">C</span>
           </div>
         </template>
-        <t-menu-item value="dashboard" to="/dashboard">
+        <t-menu-item value="dashboard" :to="resolvePath('/dashboard')">
           <template #icon>
             <t-icon name="dashboard" />
           </template>
-          仪表盘
+          {{ $t("menu.dashboard") }}
         </t-menu-item>
-        <t-submenu value="tools" title="工具分类">
+        <t-submenu value="tools" :title="$t('menu.tools')">
           <template #icon>
             <t-icon name="tools" />
           </template>
-          <t-submenu value="dev-tools" title="开发者工具">
+          <t-submenu value="dev-tools" :title="$t('menu.devTools')">
             <template #icon>
               <t-icon
                 :name="
@@ -32,8 +32,10 @@
                 "
               />
             </template>
-            <t-menu-item value="cssminify" to="/tools/dev/css-minify"
-              >CSS 压缩工具</t-menu-item
+            <t-menu-item
+              value="cssminify"
+              :to="resolvePath('/tools/dev/css-minify')"
+              >{{ $t("menu.cssMinify") }}</t-menu-item
             >
           </t-submenu>
         </t-submenu>
@@ -50,6 +52,7 @@
           </t-button>
         </div>
         <div class="header-right">
+          <LanguageSwitcher />
           <t-dropdown :min-column-width="120" trigger="click">
             <t-button variant="text" shape="square">
               <template #icon>
@@ -60,13 +63,16 @@
             </t-button>
             <t-dropdown-menu>
               <t-dropdown-item @click="handleThemeChange('light')">
-                <t-icon name="mode-light" style="margin-right: 8px" /> 亮色模式
+                <t-icon name="mode-light" style="margin-right: 8px" />
+                {{ $t("menu.lightMode") }}
               </t-dropdown-item>
               <t-dropdown-item @click="handleThemeChange('dark')">
-                <t-icon name="mode-dark" style="margin-right: 8px" /> 暗色模式
+                <t-icon name="mode-dark" style="margin-right: 8px" />
+                {{ $t("menu.darkMode") }}
               </t-dropdown-item>
               <t-dropdown-item @click="handleThemeChange('auto')">
-                <t-icon name="desktop" style="margin-right: 8px" /> 跟随系统
+                <t-icon name="desktop" style="margin-right: 8px" />
+                {{ $t("menu.systemMode") }}
               </t-dropdown-item>
             </t-dropdown-menu>
           </t-dropdown>
@@ -88,12 +94,15 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
 import { useTheme } from "../composables/useTheme";
+import LanguageSwitcher from "../components/LanguageSwitcher.vue";
 
 const route = useRoute();
 const collapsed = ref(false);
 const expanded = ref<string[]>([]);
 const { theme, setTheme } = useTheme();
+const { locale } = useI18n();
 
 const activeMenu = computed(() => {
   return route.name ? String(route.name).toLowerCase() : "dashboard";
@@ -105,6 +114,18 @@ const toggleSidebar = () => {
 
 const handleThemeChange = (mode: "light" | "dark" | "auto") => {
   setTheme(mode);
+};
+
+const resolvePath = (path: string) => {
+  const currentLang = locale.value;
+  // 如果是默认语言，直接返回原路径
+  if (currentLang === "zh-CN") {
+    return path;
+  }
+  // 否则添加语言前缀
+  // 确保路径以 / 开头
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
+  return `/${currentLang}${cleanPath}`;
 };
 </script>
 
@@ -157,6 +178,12 @@ const handleThemeChange = (mode: "light" | "dark" | "auto") => {
   padding: 0 16px;
   background-color: var(--td-bg-color-container);
   border-bottom: 1px solid var(--td-component-stroke);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .scroll-container {
