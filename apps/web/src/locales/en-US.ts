@@ -8,6 +8,8 @@ export default {
     fileTreeGenerator: "File Tree Generator",
     tripleDes: "3DES",
     aes: "AES",
+    graphics: "Graphics & Visual",
+    colorConverter: "Color Converter",
     lightMode: "Light Mode",
     darkMode: "Dark Mode",
     systemMode: "Auto",
@@ -127,6 +129,61 @@ export default {
             step3: {
               title: "Execute",
               desc: "Click Encrypt or Decrypt. Results appear on the right and can be copied.",
+            },
+          },
+        },
+      },
+    },
+    graphics: {
+      colorConverter: {
+        title: "Color Converter",
+        description:
+          "Convert colors between formats (HEX, RGB, HSL, HWB, LCH, CMYK) in real-time with preview and random generation.",
+        input: "Color Input",
+        hexPlaceholder: "Enter HEX color (e.g. #165DFF)",
+        random: "Random Color",
+        clear: "Clear",
+        preview: "Preview",
+        output: "Conversion Results",
+        copy: "Copy",
+        error: "Format Error",
+        example: "Load Example",
+        presets: {
+          title: "Color Presets",
+          material: "Material UI",
+          flat: "Flat UI",
+          webSafe: "Web Safe",
+          gray: "Gray Scale",
+        },
+        guide: {
+          meaning: {
+            title: "Color Converter Intro",
+            desc: "The Color Converter tool helps developers and designers quickly convert between different color formats (like Hex, RGB, HSL, HSV, CMYK) to ensure color accuracy across different environments.",
+          },
+          features: {
+            title: "Features",
+            formats: {
+              title: "Multi-Format Support",
+              desc: "Supports various common color formats including Hex, RGB, HSL, HSV, CMYK.",
+            },
+            preview: {
+              title: "Real-time Preview",
+              desc: "Instantly preview the color and see conversion results as you input.",
+            },
+          },
+          usage: {
+            title: "Usage Guide",
+            step1: {
+              title: "Input Color",
+              desc: "Enter a Hex value, RGB value, or color name in the input box.",
+            },
+            step2: {
+              title: "View Results",
+              desc: "The tool automatically identifies the input and converts it to other formats shown on the right.",
+            },
+            step3: {
+              title: "Copy & Use",
+              desc: "Click the copy button next to the desired format to copy the color code to your clipboard.",
             },
           },
         },

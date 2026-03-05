@@ -8,6 +8,8 @@ export default {
     fileTreeGenerator: "ファイルツリー生成",
     tripleDes: "3DES 暗号化",
     aes: "AES 暗号化",
+    graphics: "グラフィックス",
+    colorConverter: "カラーコンバータ",
     lightMode: "ライトモード",
     darkMode: "ダークモード",
     systemMode: "システム",
@@ -95,6 +97,61 @@ export default {
             step3: {
               title: "実行",
               desc: "暗号化または復号化ボタンをクリックすると、結果が右側の出力ボックスにリアルタイムで表示され、ワンクリックでコピーできます。",
+            },
+          },
+        },
+      },
+    },
+    graphics: {
+      colorConverter: {
+        title: "カラーコンバータ",
+        description:
+          "HEX, RGB, HSL, HWB, LCH, CMYK などの色形式をリアルタイムで変換し、プレビューとランダム生成をサポートします。",
+        input: "色入力",
+        hexPlaceholder: "HEXカラーを入力 (例: #165DFF)",
+        random: "ランダム",
+        clear: "クリア",
+        preview: "プレビュー",
+        output: "変換結果",
+        copy: "コピー",
+        error: "形式エラー",
+        example: "例を読み込む",
+        presets: {
+          title: "カラープリセット",
+          material: "Material カラー",
+          flat: "フラットカラー",
+          webSafe: "Webセーフカラー",
+          gray: "グレースケール",
+        },
+        guide: {
+          meaning: {
+            title: "カラーコンバータの概要",
+            desc: "カラーコンバータツールは、開発者やデザイナーが異なる色形式（Hex、RGB、HSL、HSV、CMYKなど）間で素早く変換し、異なる環境での色の正確性を確保するのに役立ちます。",
+          },
+          features: {
+            title: "機能の特徴",
+            formats: {
+              title: "多形式サポート",
+              desc: "Hex、RGB、HSL、HSV、CMYKなど、一般的な色形式をサポートしています。",
+            },
+            preview: {
+              title: "リアルタイムプレビュー",
+              desc: "色を入力すると、右側に色のプレビューと各形式の変換結果がリアルタイムで表示されます。",
+            },
+          },
+          usage: {
+            title: "使用ガイド",
+            step1: {
+              title: "色の入力",
+              desc: "入力ボックスに色のHex値、RGB値、または色名を入力します。",
+            },
+            step2: {
+              title: "結果の確認",
+              desc: "ツールは入力を自動的に認識し、他の形式に変換して右側に表示します。",
+            },
+            step3: {
+              title: "コピーして使用",
+              desc: "対応する形式の横にあるコピーボタンをクリックして、カラーコードをクリップボードにコピーします。",
             },
           },
         },

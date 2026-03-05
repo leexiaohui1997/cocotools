@@ -8,6 +8,8 @@ export default {
     fileTreeGenerator: "파일 트리 생성기",
     tripleDes: "3DES 도구",
     aes: "AES 암호화",
+    graphics: "그래픽",
+    colorConverter: "색상 변환기",
     lightMode: "라이트 모드",
     darkMode: "다크 모드",
     systemMode: "시스템",
@@ -95,6 +97,61 @@ export default {
             step3: {
               title: "실행",
               desc: "암호화 또는 복호화 버튼을 클릭하면 결과가 오른쪽 출력 상자에 실시간으로 표시되며 원클릭으로 복사할 수 있습니다.",
+            },
+          },
+        },
+      },
+    },
+    graphics: {
+      colorConverter: {
+        title: "색상 변환기",
+        description:
+          "다양한 색상 형식(Hex, RGB, HSL, HWB, LCH, CMYK) 간에 실시간으로 변환하고, 미리보기 및 랜덤 생성을 지원합니다.",
+        input: "색상 입력",
+        hexPlaceholder: "HEX 색상 값 입력 (예: #165DFF)",
+        random: "랜덤 색상",
+        clear: "지우기",
+        preview: "색상 미리보기",
+        output: "변환 결과",
+        copy: "복사",
+        error: "형식 오류",
+        example: "예제 불러오기",
+        presets: {
+          title: "색상 프리셋",
+          material: "Material 색상",
+          flat: "플랫 색상",
+          webSafe: "웹 안전 색상",
+          gray: "그레이스케일",
+        },
+        guide: {
+          meaning: {
+            title: "색상 변환기 소개",
+            desc: "색상 변환기 도구는 개발자와 디자이너가 다양한 색상 형식(Hex, RGB, HSL, HSV, CMYK 등) 간에 빠르게 변환하여 다양한 환경에서 색상의 정확성을 보장하도록 돕습니다.",
+          },
+          features: {
+            title: "기능 특징",
+            formats: {
+              title: "다양한 형식 지원",
+              desc: "Hex, RGB, HSL, HSV, CMYK 등 다양한 일반적인 색상 형식을 지원합니다.",
+            },
+            preview: {
+              title: "실시간 미리보기",
+              desc: "색상을 입력하면 오른쪽에서 색상 미리보기와 다양한 형식의 변환 결과를 실시간으로 확인할 수 있습니다.",
+            },
+          },
+          usage: {
+            title: "사용 가이드",
+            step1: {
+              title: "색상 입력",
+              desc: "입력 상자에 색상의 Hex 값, RGB 값 또는 색상 이름을 입력합니다.",
+            },
+            step2: {
+              title: "결과 확인",
+              desc: "도구가 입력을 자동으로 인식하고 다른 형식으로 변환하여 오른쪽에 표시합니다.",
+            },
+            step3: {
+              title: "복사 및 사용",
+              desc: "해당 형식 옆의 복사 버튼을 클릭하여 색상 코드를 클립보드에 복사합니다.",
             },
           },
         },

@@ -8,6 +8,8 @@ export default {
     fileTreeGenerator: "文件树生成器",
     tripleDes: "3DES 加解密",
     aes: "AES 加解密",
+    graphics: "图形视觉",
+    colorConverter: "颜色转换器",
     lightMode: "亮色模式",
     darkMode: "暗色模式",
     systemMode: "跟随系统",
@@ -34,6 +36,61 @@ export default {
     rate: "压缩率",
   },
   tool: {
+    graphics: {
+      colorConverter: {
+        title: "颜色转换器",
+        description:
+          "在 Hex, RGB, HSL 等多种颜色格式之间进行实时转换，方便开发与设计。",
+        input: "输入颜色",
+        hexPlaceholder: "请输入 HEX 颜色值 (例如 #165DFF)",
+        random: "随机颜色",
+        preview: "颜色预览",
+        output: "转换结果",
+        copy: "复制",
+        clear: "清空",
+        error: "格式错误",
+        example: "载入示例",
+        presets: {
+          title: "颜色预设",
+          material: "Material 颜色",
+          flat: "扁平化颜色",
+          webSafe: "网页安全色",
+          gray: "灰度色",
+        },
+        guide: {
+          meaning: {
+            title: "颜色转换简介",
+            desc: "颜色转换工具可以帮助开发者和设计师在不同的颜色表示格式（如 Hex, RGB, HSL, HSV, CMYK）之间进行快速转换，确保颜色在不同环境下的准确性。",
+          },
+          features: {
+            title: "功能特点",
+            formats: {
+              title: "多格式支持",
+              desc: "支持 Hex, RGB, HSL, HSV, CMYK 等多种常用颜色格式。",
+            },
+            preview: {
+              title: "实时预览",
+              desc: "输入颜色后，右侧会实时显示颜色预览和各种格式的转换结果。",
+            },
+          },
+          usage: {
+            title: "使用指南",
+            step1: {
+              title: "输入颜色",
+              desc: "在输入框中输入颜色的 Hex 值、RGB 值或颜色名称。",
+            },
+            step2: {
+              title: "查看结果",
+              desc: "工具会自动识别输入并转换为其他格式，结果显示在右侧。",
+            },
+            step3: {
+              title: "复制使用",
+              desc: "点击对应格式后的复制按钮，即可将颜色代码复制到剪贴板。",
+            },
+          },
+        },
+      },
+    },
     crypto: {
       tripleDes: {
         title: "3DES 加解密工具",

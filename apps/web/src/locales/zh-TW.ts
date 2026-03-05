@@ -7,7 +7,9 @@ export default {
     cssMinify: "CSS 壓縮工具",
     fileTreeGenerator: "檔案樹生成器",
     tripleDes: "3DES 加解密工具",
-    aes: "AES 加解密工具",
+    aes: "AES 加解密",
+    graphics: "圖形視覺",
+    colorConverter: "顏色轉換器",
     lightMode: "亮色模式",
     darkMode: "暗色模式",
     systemMode: "跟隨系統",
@@ -95,6 +97,61 @@ export default {
             step3: {
               title: "執行操作",
               desc: "點擊加密或解密按鈕，結果將即時顯示在右側輸出框中，支援一鍵複製。",
+            },
+          },
+        },
+      },
+    },
+    graphics: {
+      colorConverter: {
+        title: "顏色轉換器",
+        description:
+          "在多種顏色格式（HEX, RGB, HSL, HWB, LCH, CMYK）之間進行即時轉換，支援顏色預覽與隨機生成。",
+        input: "顏色輸入",
+        hexPlaceholder: "請輸入 HEX 顏色值 (例如 #165DFF)",
+        random: "隨機顏色",
+        clear: "清空",
+        preview: "顏色預覽",
+        output: "轉換結果",
+        copy: "複製",
+        error: "格式錯誤",
+        example: "載入範例",
+        presets: {
+          title: "顏色預設",
+          material: "Material 顏色",
+          flat: "扁平化顏色",
+          webSafe: "網頁安全色",
+          gray: "灰度色",
+        },
+        guide: {
+          meaning: {
+            title: "顏色轉換簡介",
+            desc: "顏色轉換工具可以幫助開發者和設計師在不同的顏色表示格式（如 Hex, RGB, HSL, HSV, CMYK）之間進行快速轉換，確保顏色在不同環境下的準確性。",
+          },
+          features: {
+            title: "功能特點",
+            formats: {
+              title: "多格式支援",
+              desc: "支援 Hex, RGB, HSL, HSV, CMYK 等多種常用顏色格式。",
+            },
+            preview: {
+              title: "即時預覽",
+              desc: "輸入顏色後，右側會即時顯示顏色預覽和各種格式的轉換結果。",
+            },
+          },
+          usage: {
+            title: "使用指南",
+            step1: {
+              title: "輸入顏色",
+              desc: "在輸入框中輸入顏色的 Hex 值、RGB 值或顏色名稱。",
+            },
+            step2: {
+              title: "查看結果",
+              desc: "工具會自動識別輸入並轉換為其他格式，結果顯示在右側。",
+            },
+            step3: {
+              title: "複製使用",
+              desc: "點擊對應格式後的複製按鈕，即可將顏色代碼複製到剪貼簿。",
             },
           },
         },

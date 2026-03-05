@@ -8,6 +8,8 @@ export default {
     fileTreeGenerator: "Generatore Albero File",
     tripleDes: "3DES",
     aes: "Crittografia AES",
+    graphics: "Grafica",
+    colorConverter: "Convertitore Colori",
     lightMode: "Modalità chiara",
     darkMode: "Modalità scura",
     systemMode: "Auto",
@@ -127,6 +129,61 @@ export default {
             step3: {
               title: "Esegui",
               desc: "Clicca su Cifra o Decifra. I risultati appaiono a destra in tempo reale e possono essere copiati.",
+            },
+          },
+        },
+      },
+    },
+    graphics: {
+      colorConverter: {
+        title: "Convertitore Colori",
+        description:
+          "Converti i colori tra formati (HEX, RGB, HSL, HWB, LCH, CMYK) in tempo reale con anteprima e generazione casuale.",
+        input: "Input Colore",
+        hexPlaceholder: "Inserisci colore HEX (es. #165DFF)",
+        random: "Colore Casuale",
+        clear: "Pulisci",
+        preview: "Anteprima",
+        output: "Risultati Conversione",
+        copy: "Copia",
+        error: "Errore Formato",
+        example: "Carica Esempio",
+        presets: {
+          title: "Preset Colori",
+          material: "Colori Material",
+          flat: "Colori Flat",
+          webSafe: "Colori Web Safe",
+          gray: "Scala di grigi",
+        },
+        guide: {
+          meaning: {
+            title: "Introduzione al Convertitore Colori",
+            desc: "Lo strumento di conversione colori aiuta sviluppatori e designer a convertire rapidamente tra diversi formati di colore (come Hex, RGB, HSL, HSV, CMYK) per garantire la precisione del colore in ambienti diversi.",
+          },
+          features: {
+            title: "Caratteristiche",
+            formats: {
+              title: "Supporto Multi-Formato",
+              desc: "Supporta vari formati di colore comuni tra cui Hex, RGB, HSL, HSV, CMYK.",
+            },
+            preview: {
+              title: "Anteprima in Tempo Reale",
+              desc: "Inserisci un colore e l'anteprima e i risultati della conversione appariranno istantaneamente sulla destra.",
+            },
+          },
+          usage: {
+            title: "Guida all'uso",
+            step1: {
+              title: "Inserisci Colore",
+              desc: "Inserisci un valore Hex, RGB o il nome del colore nella casella di input.",
+            },
+            step2: {
+              title: "Visualizza Risultati",
+              desc: "Lo strumento identifica automaticamente l'input e lo converte in altri formati mostrati a destra.",
+            },
+            step3: {
+              title: "Copia e Usa",
+              desc: "Clicca sul pulsante copia accanto al formato desiderato per copiare il codice colore negli appunti.",
             },
           },
         },

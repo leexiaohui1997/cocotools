@@ -58,6 +58,18 @@
               $t("menu.aes")
             }}</t-menu-item>
           </t-submenu>
+          <t-submenu value="graphics" :title="$t('menu.graphics')">
+            <template #icon>
+              <t-icon
+                :name="expanded.includes('graphics') ? 'folder-open' : 'folder'"
+              />
+            </template>
+            <t-menu-item
+              value="colorconverter"
+              :to="resolvePath('/tools/graphics/color-converter')"
+              >{{ $t("menu.colorConverter") }}</t-menu-item
+            >
+          </t-submenu>
         </t-submenu>
         <!-- 其他菜单项 -->
       </t-menu>

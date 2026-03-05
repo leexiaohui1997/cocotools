@@ -10,6 +10,7 @@ import CssMinify from "../pages/tools/dev/CssMinify.vue";
 import FileTreeGenerator from "../pages/tools/dev/FileTreeGenerator.vue";
 import TripleDES from "../pages/tools/crypto/TripleDES.vue";
 import AES from "../pages/tools/crypto/AES.vue";
+import ColorConverter from "../pages/tools/graphics/ColorConverter.vue";
 import i18n from "../locales";
 
 const supportedLocales = [
@@ -64,6 +65,12 @@ const routes: RouteRecordRaw[] = [
         name: "AES",
         component: AES,
         meta: { title: "AES 加解密" },
+      },
+      {
+        path: "tools/graphics/color-converter",
+        name: "ColorConverter",
+        component: ColorConverter,
+        meta: { title: "颜色转换器" },
       },
       // 其他业务页面将添加到这里
     ],
