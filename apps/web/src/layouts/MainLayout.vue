@@ -13,11 +13,7 @@
             <span v-else class="logo-text">C</span>
           </div>
         </template>
-        <t-menu-item
-          value="dashboard"
-          to="/dashboard"
-          @click="$router.push('/dashboard')"
-        >
+        <t-menu-item value="dashboard" to="/dashboard">
           <template #icon>
             <t-icon name="dashboard" />
           </template>
@@ -41,7 +37,7 @@
               <template #icon>
                 <t-icon v-if="theme === 'light'" name="mode-light" />
                 <t-icon v-else-if="theme === 'dark'" name="mode-dark" />
-                <t-icon v-else name="system" />
+                <t-icon v-else name="desktop" />
               </template>
             </t-button>
             <t-dropdown-menu>
@@ -52,7 +48,7 @@
                 <t-icon name="mode-dark" style="margin-right: 8px" /> 暗色模式
               </t-dropdown-item>
               <t-dropdown-item @click="handleThemeChange('auto')">
-                <t-icon name="system" style="margin-right: 8px" /> 跟随系统
+                <t-icon name="desktop" style="margin-right: 8px" /> 跟随系统
               </t-dropdown-item>
             </t-dropdown-menu>
           </t-dropdown>
@@ -105,10 +101,19 @@ const handleThemeChange = (mode: "light" | "dark" | "auto") => {
   height: 64px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 0 !important;
   font-size: 20px;
   font-weight: bold;
   color: var(--td-text-color-primary);
   width: 100%;
+}
+
+:deep(.t-menu__logo) {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
 }
 
 .main-header {
