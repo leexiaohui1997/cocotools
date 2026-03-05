@@ -442,10 +442,6 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
 
-    .output-card {
-      // height: 100%; // Remove full height to allow stacking
-    }
-
     .color-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
