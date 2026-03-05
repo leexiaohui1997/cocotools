@@ -2,9 +2,12 @@ export default {
   menu: {
     dashboard: "لوحة القيادة",
     tools: "الأدوات",
+    crypto: "الأمان",
     devTools: "أدوات المطور",
     cssMinify: "ضاغط CSS",
     fileTreeGenerator: "مولد شجرة الملفات",
+    tripleDes: "3DES",
+    aes: "تشفير AES",
     lightMode: "وضع الضوء",
     darkMode: "الوضع الداكن",
     systemMode: "نظام",
@@ -31,6 +34,104 @@ export default {
     rate: "المعدل",
   },
   tool: {
+    crypto: {
+      tripleDes: {
+        title: "3DES Tool",
+        description:
+          "Encrypt and decrypt data using 3DES algorithm, supports multiple modes and padding.",
+        input: "Input Content",
+        key: "Key",
+        mode: "Mode",
+        padding: "Padding",
+        encrypt: "Encrypt",
+        decrypt: "Decrypt",
+        output: "Output Result",
+        copy: "Copy",
+        clear: "Clear",
+        error: "Process Failed",
+        example: "Load Example",
+        guide: {
+          meaning: {
+            title: "Intro to 3DES Encryption",
+            desc: "3DES (Triple DES) is an enhancement of the DES encryption algorithm, which encrypts data three times using up to three different keys, significantly improving security. Although being replaced by AES, it is still widely used in legacy systems and specific industries.",
+          },
+          features: {
+            title: "Features",
+            modes: {
+              title: "Multiple Modes",
+              desc: "Supports various modes like ECB, CBC, CFB, OFB, CTR to meet different security requirements.",
+            },
+            padding: {
+              title: "Flexible Padding",
+              desc: "Provides options like Pkcs7, ZeroPadding, Iso10126, NoPadding, AnsiX923 to ensure compatibility.",
+            },
+          },
+          usage: {
+            title: "Usage Guide",
+            step1: {
+              title: "Input Data & Key",
+              desc: "Enter text to encrypt/decrypt on the left and set the key. The key is core to security, keep it safe.",
+            },
+            step2: {
+              title: "Select Mode",
+              desc: "Choose appropriate mode (CBC recommended) and padding (Pkcs7 recommended).",
+            },
+            step3: {
+              title: "Execute",
+              desc: "Click Encrypt or Decrypt. Results appear on the right and can be copied.",
+            },
+          },
+        },
+      },
+      aes: {
+        title: "أداة تشفير AES",
+        description:
+          "تشفير وفك تشفير البيانات باستخدام خوارزمية AES، ودعم أوضاع متعددة وحشو.",
+        input: "إدخال المحتوى",
+        key: "مفتاح",
+        mode: "الوضع",
+        padding: "الحشو",
+        encrypt: "تشفير",
+        decrypt: "فك تشفير",
+        output: "النتيجة",
+        copy: "نسخ",
+        clear: "مسح",
+        error: "خطأ",
+        example: "مثال",
+        guide: {
+          meaning: {
+            title: "مقدمة لتشفير AES",
+            desc: "AES (Advanced Encryption Standard) هو خوارزمية التشفير المتماثل الأكثر شيوعًا، ويستخدم على نطاق واسع لحماية البيانات بسبب أمانه العالي وأدائه ومرونته.",
+          },
+          features: {
+            title: "الميزات",
+            modes: {
+              title: "دعم أوضاع متعددة",
+              desc: "يدعم أوضاعًا مختلفة مثل ECB و CBC و CFB و OFB و CTR لتلبية متطلبات الأمان المختلفة.",
+            },
+            padding: {
+              title: "حشو مرن",
+              desc: "يوفر خيارات مثل Pkcs7 و ZeroPadding و Iso10126 و NoPadding و AnsiX923 لضمان التوافق.",
+            },
+          },
+          usage: {
+            title: "دليل الاستخدام",
+            step1: {
+              title: "إدخال البيانات والمفتاح",
+              desc: "أدخل النص للتشفير / فك التشفير على اليسار وقم بتعيين المفتاح. يدعم AES مفاتيح 128/192/256 بت.",
+            },
+            step2: {
+              title: "اختر الوضع",
+              desc: "اختر الوضع المناسب (يوصى بـ CBC) والحشو (يوصى بـ Pkcs7).",
+            },
+            step3: {
+              title: "تنفيذ",
+              desc: "انقر فوق تشفير أو فك تشفير. تظهر النتائج على اليمين ويمكن نسخها.",
+            },
+          },
+        },
+      },
+    },
     fileTreeGenerator: {
       title: "مولد شجرة الملفات",
       description: "إنشاء هيكل شجري ASCII لدلائل المشروع للتوثيق وعرض الكود.",

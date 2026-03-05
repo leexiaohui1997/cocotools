@@ -7,6 +7,7 @@ export default {
     cssMinify: "CSS 圧縮",
     fileTreeGenerator: "ファイルツリー生成",
     tripleDes: "3DES 暗号化",
+    aes: "AES 暗号化",
     lightMode: "ライトモード",
     darkMode: "ダークモード",
     systemMode: "システム",
@@ -49,6 +50,54 @@ export default {
         clear: "クリア",
         error: "処理失敗",
         example: "例をロード",
+      },
+      aes: {
+        title: "AES 暗号化ツール",
+        description:
+          "AESアルゴリズムを使用してデータの暗号化と復号化を行います。複数のモードとパディングをサポートしています。",
+        input: "入力内容",
+        key: "キー",
+        mode: "モード",
+        padding: "パディング",
+        encrypt: "暗号化",
+        decrypt: "復号化",
+        output: "出力結果",
+        copy: "コピー",
+        clear: "クリア",
+        error: "処理失敗",
+        example: "例をロード",
+        guide: {
+          meaning: {
+            title: "AES 暗号化の概要",
+            desc: "AES (Advanced Encryption Standard) は、現在最も普及している対称暗号化アルゴリズムであり、その高いセキュリティ、パフォーマンス、柔軟性により、さまざまなデータ保護シナリオで広く使用されています。",
+          },
+          features: {
+            title: "機能の特徴",
+            modes: {
+              title: "複数のモードをサポート",
+              desc: "ECB、CBC、CFB、OFB、CTR などのさまざまな暗号化モードをサポートし、さまざまなシナリオのセキュリティ要件を満たします。",
+            },
+            padding: {
+              title: "柔軟なパディング方式",
+              desc: "Pkcs7、ZeroPadding、Iso10126、NoPadding、AnsiX923 などの複数のパディングオプションを提供し、データ処理の互換性を確保します。",
+            },
+          },
+          usage: {
+            title: "使用ガイド",
+            step1: {
+              title: "データとキーの入力",
+              desc: "左側に暗号化または復号化するテキストを入力し、キーを設定します。AES は 128/192/256 ビットキーをサポートしています。",
+            },
+            step2: {
+              title: "モードの選択",
+              desc: "ニーズに応じて適切な暗号化モード（CBC を推奨）とパディング方式（Pkcs7 を推奨）を選択します。",
+            },
+            step3: {
+              title: "実行",
+              desc: "暗号化または復号化ボタンをクリックすると、結果が右側の出力ボックスにリアルタイムで表示され、ワンクリックでコピーできます。",
+            },
+          },
+        },
       },
     },
     fileTreeGenerator: {

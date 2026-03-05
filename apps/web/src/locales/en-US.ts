@@ -7,6 +7,7 @@ export default {
     cssMinify: "CSS Minifier",
     fileTreeGenerator: "File Tree Generator",
     tripleDes: "3DES",
+    aes: "AES",
     lightMode: "Light Mode",
     darkMode: "Dark Mode",
     systemMode: "Auto",
@@ -70,6 +71,54 @@ export default {
             step1: {
               title: "Input Data & Key",
               desc: "Enter text to encrypt/decrypt on the left and set the key. The key is core to security, keep it safe.",
+            },
+            step2: {
+              title: "Select Mode",
+              desc: "Choose appropriate mode (CBC recommended) and padding (Pkcs7 recommended).",
+            },
+            step3: {
+              title: "Execute",
+              desc: "Click Encrypt or Decrypt. Results appear on the right and can be copied.",
+            },
+          },
+        },
+      },
+      aes: {
+        title: "AES Tool",
+        description:
+          "Encrypt and decrypt data using AES algorithm, supports multiple modes and padding.",
+        input: "Input Content",
+        key: "Key",
+        mode: "Mode",
+        padding: "Padding",
+        encrypt: "Encrypt",
+        decrypt: "Decrypt",
+        output: "Output Result",
+        copy: "Copy",
+        clear: "Clear",
+        error: "Process Failed",
+        example: "Load Example",
+        guide: {
+          meaning: {
+            title: "Intro to AES Encryption",
+            desc: "AES (Advanced Encryption Standard) is the most popular symmetric encryption algorithm, widely used for data protection due to its high security, performance, and flexibility.",
+          },
+          features: {
+            title: "Features",
+            modes: {
+              title: "Multiple Modes",
+              desc: "Supports various modes like ECB, CBC, CFB, OFB, CTR to meet different security requirements.",
+            },
+            padding: {
+              title: "Flexible Padding",
+              desc: "Provides options like Pkcs7, ZeroPadding, Iso10126, NoPadding, AnsiX923 to ensure compatibility.",
+            },
+          },
+          usage: {
+            title: "Usage Guide",
+            step1: {
+              title: "Input Data & Key",
+              desc: "Enter text to encrypt/decrypt on the left and set the key. AES supports 128/192/256-bit keys.",
             },
             step2: {
               title: "Select Mode",

@@ -9,6 +9,7 @@ import NotFound from "../pages/NotFound.vue";
 import CssMinify from "../pages/tools/dev/CssMinify.vue";
 import FileTreeGenerator from "../pages/tools/dev/FileTreeGenerator.vue";
 import TripleDES from "../pages/tools/crypto/TripleDES.vue";
+import AES from "../pages/tools/crypto/AES.vue";
 import i18n from "../locales";
 
 const supportedLocales = [
@@ -57,6 +58,12 @@ const routes: RouteRecordRaw[] = [
         name: "TripleDES",
         component: TripleDES,
         meta: { title: "3DES 加解密" },
+      },
+      {
+        path: "tools/crypto/aes",
+        name: "AES",
+        component: AES,
+        meta: { title: "AES 加解密" },
       },
       // 其他业务页面将添加到这里
     ],

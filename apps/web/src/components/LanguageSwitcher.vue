@@ -55,6 +55,9 @@ const changeLocale = (val: string) => {
   // 复制当前的 params
   const newParams = { ...route.params };
 
+  // 保存语言偏好
+  localStorage.setItem("locale", val);
+
   if (val === "zh-CN") {
     // 切换到默认语言，移除 lang 参数
     // 在 Vue Router 4 中，对于可选参数，传递空字符串 "" 通常是移除它的有效方法

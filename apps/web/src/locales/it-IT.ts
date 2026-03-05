@@ -2,9 +2,12 @@ export default {
   menu: {
     dashboard: "Dashboard",
     tools: "Strumenti",
+    crypto: "Sicurezza",
     devTools: "Strumenti per sviluppatori",
     cssMinify: "Minificatore CSS",
     fileTreeGenerator: "Generatore Albero File",
+    tripleDes: "3DES",
+    aes: "Crittografia AES",
     lightMode: "Modalità chiara",
     darkMode: "Modalità scura",
     systemMode: "Auto",
@@ -31,6 +34,104 @@ export default {
     rate: "Tasso",
   },
   tool: {
+    crypto: {
+      tripleDes: {
+        title: "3DES Tool",
+        description:
+          "Encrypt and decrypt data using 3DES algorithm, supports multiple modes and padding.",
+        input: "Input Content",
+        key: "Key",
+        mode: "Mode",
+        padding: "Padding",
+        encrypt: "Encrypt",
+        decrypt: "Decrypt",
+        output: "Output Result",
+        copy: "Copy",
+        clear: "Clear",
+        error: "Process Failed",
+        example: "Load Example",
+        guide: {
+          meaning: {
+            title: "Intro to 3DES Encryption",
+            desc: "3DES (Triple DES) is an enhancement of the DES encryption algorithm, which encrypts data three times using up to three different keys, significantly improving security. Although being replaced by AES, it is still widely used in legacy systems and specific industries.",
+          },
+          features: {
+            title: "Features",
+            modes: {
+              title: "Multiple Modes",
+              desc: "Supports various modes like ECB, CBC, CFB, OFB, CTR to meet different security requirements.",
+            },
+            padding: {
+              title: "Flexible Padding",
+              desc: "Provides options like Pkcs7, ZeroPadding, Iso10126, NoPadding, AnsiX923 to ensure compatibility.",
+            },
+          },
+          usage: {
+            title: "Usage Guide",
+            step1: {
+              title: "Input Data & Key",
+              desc: "Enter text to encrypt/decrypt on the left and set the key. The key is core to security, keep it safe.",
+            },
+            step2: {
+              title: "Select Mode",
+              desc: "Choose appropriate mode (CBC recommended) and padding (Pkcs7 recommended).",
+            },
+            step3: {
+              title: "Execute",
+              desc: "Click Encrypt or Decrypt. Results appear on the right and can be copied.",
+            },
+          },
+        },
+      },
+      aes: {
+        title: "Strumento Crittografia AES",
+        description:
+          "Cifra e decifra i dati utilizzando l'algoritmo AES, supporta diverse modalità e padding.",
+        input: "Input",
+        key: "Chiave",
+        mode: "Modalità",
+        padding: "Padding",
+        encrypt: "Cifra",
+        decrypt: "Decifra",
+        output: "Risultato",
+        copy: "Copia",
+        clear: "Pulisci",
+        error: "Errore",
+        example: "Esempio",
+        guide: {
+          meaning: {
+            title: "Introduzione alla Crittografia AES",
+            desc: "AES (Advanced Encryption Standard) è l'algoritmo di crittografia simmetrica più popolare, ampiamente utilizzato per la protezione dei dati grazie alla sua elevata sicurezza, prestazioni e flessibilità.",
+          },
+          features: {
+            title: "Caratteristiche",
+            modes: {
+              title: "Supporto Modalità Multiple",
+              desc: "Supporta varie modalità come ECB, CBC, CFB, OFB, CTR per soddisfare diversi requisiti di sicurezza.",
+            },
+            padding: {
+              title: "Padding Flessibile",
+              desc: "Fornisce opzioni come Pkcs7, ZeroPadding, Iso10126, NoPadding, AnsiX923 per garantire la compatibilità.",
+            },
+          },
+          usage: {
+            title: "Guida all'uso",
+            step1: {
+              title: "Inserisci Dati e Chiave",
+              desc: "Inserisci il testo da cifrare/decifrare a sinistra e imposta la chiave. AES supporta chiavi a 128/192/256 bit.",
+            },
+            step2: {
+              title: "Seleziona Modalità",
+              desc: "Scegli la modalità appropriata (consigliata CBC) e il padding (consigliato Pkcs7).",
+            },
+            step3: {
+              title: "Esegui",
+              desc: "Clicca su Cifra o Decifra. I risultati appaiono a destra in tempo reale e possono essere copiati.",
+            },
+          },
+        },
+      },
+    },
     fileTreeGenerator: {
       title: "Generatore Albero File",
       description:

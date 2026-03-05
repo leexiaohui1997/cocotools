@@ -7,6 +7,7 @@ export default {
     cssMinify: "CSS 압축기",
     fileTreeGenerator: "파일 트리 생성기",
     tripleDes: "3DES 도구",
+    aes: "AES 암호화",
     lightMode: "라이트 모드",
     darkMode: "다크 모드",
     systemMode: "시스템",
@@ -49,6 +50,54 @@ export default {
         clear: "지우기",
         error: "처리 실패",
         example: "예제 불러오기",
+      },
+      aes: {
+        title: "AES 암호화 도구",
+        description:
+          "AES 알고리즘을 사용하여 데이터를 암호화 및 복호화합니다. 다양한 모드와 패딩을 지원합니다.",
+        input: "입력 내용",
+        key: "키",
+        mode: "암호화 모드",
+        padding: "패딩 방식",
+        encrypt: "암호화",
+        decrypt: "복호화",
+        output: "출력 결과",
+        copy: "복사",
+        clear: "지우기",
+        error: "처리 실패",
+        example: "예제 불러오기",
+        guide: {
+          meaning: {
+            title: "AES 암호화 소개",
+            desc: "AES (Advanced Encryption Standard)는 현재 가장 널리 사용되는 대칭 암호화 알고리즘으로, 높은 보안성, 성능 및 유연성으로 인해 다양한 데이터 보호 시나리오에 널리 사용됩니다.",
+          },
+          features: {
+            title: "기능",
+            modes: {
+              title: "다양한 모드 지원",
+              desc: "ECB, CBC, CFB, OFB, CTR 등 다양한 암호화 모드를 지원하여 다양한 시나리오의 보안 요구 사항을 충족합니다.",
+            },
+            padding: {
+              title: "유연한 패딩 방식",
+              desc: "Pkcs7, ZeroPadding, Iso10126, NoPadding, AnsiX923 등 다양한 패딩 옵션을 제공하여 데이터 처리의 호환성을 보장합니다.",
+            },
+          },
+          usage: {
+            title: "사용 가이드",
+            step1: {
+              title: "데이터 및 키 입력",
+              desc: "왼쪽에 암호화 또는 복호화할 텍스트를 입력하고 키를 설정하십시오. AES는 128/192/256 비트 키를 지원합니다.",
+            },
+            step2: {
+              title: "모드 선택",
+              desc: "필요에 따라 적절한 암호화 모드(CBC 권장)와 패딩 방식(Pkcs7 권장)을 선택하십시오.",
+            },
+            step3: {
+              title: "실행",
+              desc: "암호화 또는 복호화 버튼을 클릭하면 결과가 오른쪽 출력 상자에 실시간으로 표시되며 원클릭으로 복사할 수 있습니다.",
+            },
+          },
+        },
       },
     },
     fileTreeGenerator: {

@@ -7,6 +7,7 @@ export default {
     cssMinify: "CSS 壓縮工具",
     fileTreeGenerator: "檔案樹生成器",
     tripleDes: "3DES 加解密工具",
+    aes: "AES 加解密工具",
     lightMode: "亮色模式",
     darkMode: "暗色模式",
     systemMode: "跟隨系統",
@@ -49,6 +50,54 @@ export default {
         clear: "清空",
         error: "處理失敗",
         example: "載入範例",
+      },
+      aes: {
+        title: "AES 加解密工具",
+        description:
+          "使用 AES 演算法進行資料加密和解密，支援多種模式和填充方式。",
+        input: "輸入內容",
+        key: "金鑰",
+        mode: "加密模式",
+        padding: "填充方式",
+        encrypt: "加密",
+        decrypt: "解密",
+        output: "輸出結果",
+        copy: "複製",
+        clear: "清空",
+        error: "處理失敗",
+        example: "載入範例",
+        guide: {
+          meaning: {
+            title: "AES 加密簡介",
+            desc: "AES (Advanced Encryption Standard) 是目前最流行的對稱加密演算法，以其高安全性、高效能和靈活性被廣泛應用於各種資料保護場景。",
+          },
+          features: {
+            title: "功能特點",
+            modes: {
+              title: "多種模式支援",
+              desc: "支援 ECB, CBC, CFB, OFB, CTR 等多種加密模式，滿足不同場景下的安全需求。",
+            },
+            padding: {
+              title: "靈活的填充方式",
+              desc: "提供 Pkcs7, ZeroPadding, Iso10126, NoPadding, AnsiX923 等多種填充選項，確保資料處理的相容性。",
+            },
+          },
+          usage: {
+            title: "使用指南",
+            step1: {
+              title: "輸入資料與金鑰",
+              desc: "在左側輸入需要加密或解密的文字，並設定金鑰。AES 支援 128/192/256 位元金鑰。",
+            },
+            step2: {
+              title: "選擇模式",
+              desc: "根據需求選擇合適的加密模式（推薦 CBC）和填充方式（推薦 Pkcs7）。",
+            },
+            step3: {
+              title: "執行操作",
+              desc: "點擊加密或解密按鈕，結果將即時顯示在右側輸出框中，支援一鍵複製。",
+            },
+          },
+        },
       },
     },
     fileTreeGenerator: {

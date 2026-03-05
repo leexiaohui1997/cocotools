@@ -54,6 +54,9 @@
               :to="resolvePath('/tools/crypto/3des')"
               >{{ $t("menu.tripleDes") }}</t-menu-item
             >
+            <t-menu-item value="aes" :to="resolvePath('/tools/crypto/aes')">{{
+              $t("menu.aes")
+            }}</t-menu-item>
           </t-submenu>
         </t-submenu>
         <!-- 其他菜单项 -->
