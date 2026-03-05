@@ -2,9 +2,11 @@ export default {
   menu: {
     dashboard: "Dashboard",
     tools: "Tools",
+    crypto: "Security & Encryption",
     devTools: "Developer Tools",
     cssMinify: "CSS Minifier",
     fileTreeGenerator: "File Tree Generator",
+    tripleDes: "3DES",
     lightMode: "Light Mode",
     darkMode: "Dark Mode",
     systemMode: "Auto",
@@ -31,6 +33,56 @@ export default {
     rate: "Rate",
   },
   tool: {
+    crypto: {
+      tripleDes: {
+        title: "3DES Tool",
+        description:
+          "Encrypt and decrypt data using 3DES algorithm, supports multiple modes and padding.",
+        input: "Input Content",
+        key: "Key",
+        mode: "Mode",
+        padding: "Padding",
+        encrypt: "Encrypt",
+        decrypt: "Decrypt",
+        output: "Output Result",
+        copy: "Copy",
+        clear: "Clear",
+        error: "Process Failed",
+        example: "Load Example",
+        guide: {
+          meaning: {
+            title: "Intro to 3DES Encryption",
+            desc: "3DES (Triple DES) is an enhancement of the DES encryption algorithm, which encrypts data three times using up to three different keys, significantly improving security. Although being replaced by AES, it is still widely used in legacy systems and specific industries.",
+          },
+          features: {
+            title: "Features",
+            modes: {
+              title: "Multiple Modes",
+              desc: "Supports various modes like ECB, CBC, CFB, OFB, CTR to meet different security requirements.",
+            },
+            padding: {
+              title: "Flexible Padding",
+              desc: "Provides options like Pkcs7, ZeroPadding, Iso10126, NoPadding, AnsiX923 to ensure compatibility.",
+            },
+          },
+          usage: {
+            title: "Usage Guide",
+            step1: {
+              title: "Input Data & Key",
+              desc: "Enter text to encrypt/decrypt on the left and set the key. The key is core to security, keep it safe.",
+            },
+            step2: {
+              title: "Select Mode",
+              desc: "Choose appropriate mode (CBC recommended) and padding (Pkcs7 recommended).",
+            },
+            step3: {
+              title: "Execute",
+              desc: "Click Encrypt or Decrypt. Results appear on the right and can be copied.",
+            },
+          },
+        },
+      },
+    },
     fileTreeGenerator: {
       title: "File Tree Generator",
       description:

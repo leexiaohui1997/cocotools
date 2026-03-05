@@ -2,9 +2,11 @@ export default {
   menu: {
     dashboard: "ダッシュボード",
     tools: "ツール",
+    crypto: "セキュリティ",
     devTools: "開発者ツール",
     cssMinify: "CSS 圧縮",
     fileTreeGenerator: "ファイルツリー生成",
+    tripleDes: "3DES 暗号化",
     lightMode: "ライトモード",
     darkMode: "ダークモード",
     systemMode: "システム",
@@ -31,6 +33,24 @@ export default {
     rate: "圧縮率",
   },
   tool: {
+    crypto: {
+      tripleDes: {
+        title: "3DES 暗号化ツール",
+        description:
+          "3DESアルゴリズムを使用してデータの暗号化と復号化を行います。複数のモードとパディングをサポートしています。",
+        input: "入力内容",
+        key: "キー",
+        mode: "モード",
+        padding: "パディング",
+        encrypt: "暗号化",
+        decrypt: "復号化",
+        output: "出力結果",
+        copy: "コピー",
+        clear: "クリア",
+        error: "処理失敗",
+        example: "例をロード",
+      },
+    },
     fileTreeGenerator: {
       title: "ファイルツリー生成",
       description:

@@ -2,9 +2,11 @@ export default {
   menu: {
     dashboard: "대시보드",
     tools: "도구",
+    crypto: "보안 및 암호화",
     devTools: "개발자 도구",
     cssMinify: "CSS 압축기",
     fileTreeGenerator: "파일 트리 생성기",
+    tripleDes: "3DES 도구",
     lightMode: "라이트 모드",
     darkMode: "다크 모드",
     systemMode: "시스템",
@@ -31,6 +33,24 @@ export default {
     rate: "비율",
   },
   tool: {
+    crypto: {
+      tripleDes: {
+        title: "3DES 암호화 도구",
+        description:
+          "3DES 알고리즘을 사용하여 데이터를 암호화 및 복호화합니다. 다양한 모드와 패딩을 지원합니다.",
+        input: "입력 내용",
+        key: "키",
+        mode: "암호화 모드",
+        padding: "패딩 방식",
+        encrypt: "암호화",
+        decrypt: "복호화",
+        output: "출력 결과",
+        copy: "복사",
+        clear: "지우기",
+        error: "처리 실패",
+        example: "예제 불러오기",
+      },
+    },
     fileTreeGenerator: {
       title: "파일 트리 생성기",
       description:

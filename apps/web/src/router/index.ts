@@ -8,6 +8,7 @@ import Dashboard from "../pages/Dashboard.vue";
 import NotFound from "../pages/NotFound.vue";
 import CssMinify from "../pages/tools/dev/CssMinify.vue";
 import FileTreeGenerator from "../pages/tools/dev/FileTreeGenerator.vue";
+import TripleDES from "../pages/tools/crypto/TripleDES.vue";
 import i18n from "../locales";
 
 const supportedLocales = [
@@ -51,6 +52,12 @@ const routes: RouteRecordRaw[] = [
         component: FileTreeGenerator,
         meta: { title: "文件树生成器" },
       },
+      {
+        path: "tools/crypto/3des",
+        name: "TripleDES",
+        component: TripleDES,
+        meta: { title: "3DES 加解密" },
+      },
       // 其他业务页面将添加到这里
     ],
   },
@@ -76,10 +83,26 @@ router.beforeEach((to, _from, next) => {
       localStorage.setItem("locale", lang);
     }
   } else {
-    // 2. 如果路径中没有语言参数，则默认为 zh-CN
+    // 2. 如果路径中没有语言参数
     const defaultLang = "zh-CN";
+    const savedLang = localStorage.getItem("locale");
+
+    // 如果有保存的语言偏好，且不是默认语言，则重定向
+    if (
+      savedLang &&
+      savedLang !== defaultLang &&
+      supportedLocales.includes(savedLang)
+    ) {
+      if (to.fullPath.startsWith("/")) {
+        return next(`/${savedLang}${to.fullPath}`);
+      }
+      return next(`/${savedLang}/${to.fullPath}`);
+    }
+
+    // 否则默认为 zh-CN
     if (i18n.global.locale.value !== defaultLang) {
       i18n.global.locale.value = defaultLang as any;
+      // 这里不强制覆盖 localStorage，以免影响用户首次访问的判断，但如果用户在 defaultLang，保持一致也可以
       localStorage.setItem("locale", defaultLang);
     }
   }

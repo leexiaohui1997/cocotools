@@ -2,9 +2,11 @@ export default {
   menu: {
     dashboard: "儀表板",
     tools: "工具分類",
+    crypto: "安全加密",
     devTools: "開發者工具",
     cssMinify: "CSS 壓縮工具",
     fileTreeGenerator: "檔案樹生成器",
+    tripleDes: "3DES 加解密工具",
     lightMode: "亮色模式",
     darkMode: "暗色模式",
     systemMode: "跟隨系統",
@@ -31,6 +33,24 @@ export default {
     rate: "壓縮率",
   },
   tool: {
+    crypto: {
+      tripleDes: {
+        title: "3DES 加解密工具",
+        description:
+          "使用 3DES 演算法進行資料加密和解密，支援多種模式和填充方式。",
+        input: "輸入內容",
+        key: "金鑰",
+        mode: "加密模式",
+        padding: "填充方式",
+        encrypt: "加密",
+        decrypt: "解密",
+        output: "輸出結果",
+        copy: "複製",
+        clear: "清空",
+        error: "處理失敗",
+        example: "載入範例",
+      },
+    },
     fileTreeGenerator: {
       title: "檔案樹生成器",
       description: "生成專案目錄的 ASCII 樹狀結構，適用於文件和程式碼展示。",

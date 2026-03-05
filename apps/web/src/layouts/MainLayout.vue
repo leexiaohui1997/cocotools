@@ -43,6 +43,18 @@
               >{{ $t("menu.fileTreeGenerator") }}</t-menu-item
             >
           </t-submenu>
+          <t-submenu value="crypto" :title="$t('menu.crypto')">
+            <template #icon>
+              <t-icon
+                :name="expanded.includes('crypto') ? 'folder-open' : 'folder'"
+              />
+            </template>
+            <t-menu-item
+              value="tripledes"
+              :to="resolvePath('/tools/crypto/3des')"
+              >{{ $t("menu.tripleDes") }}</t-menu-item
+            >
+          </t-submenu>
         </t-submenu>
         <!-- 其他菜单项 -->
       </t-menu>
